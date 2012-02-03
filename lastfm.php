@@ -23,9 +23,11 @@ function getTopArtists($num, $lfmMetro, $lfmCountry) {
 	$lastfmData = simplexml_load_string(acquire_file($lastfmUri));
 	foreach($lastfmData->topartists->artist as $artistName) {
 		$count++;
-		//the casting is needed because SimpleXML objects are complex objects.
-		//http://www.php.net/manual/en/ref.simplexml.php#91057
-		$ret[] = (string) $artistName->name[0];
+		if ($count <= $num) {
+			//the casting is needed because SimpleXML objects are complex objects.
+			//http://www.php.net/manual/en/ref.simplexml.php#91057
+			$ret[] = (string) $artistName->name[0];
+		}
 	}
 	
 	return($ret);
