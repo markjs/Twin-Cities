@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<shared>
+		<city1>
+			<name>Edinburgh></name>
+			<country>United Kingdom</country>
+		</city1>
+		<city2>
+			<name>San Diego></name>
+			<country>United States</country>
+		</city2>
+	</shared>
+	<lastfm>
+		<apiKey>efb8ea84b7e2ed5fa230a15d080cef3d</apiKey>
+		<secret>fd7d5951826e506bfe5dce353e335157</secret>
+		<!--default method: get most popular current artists in the city
+			other methods *are* available-->
+		<method>geo.getmetroartistchart</method>
+	</lastfm>
+</config>
