@@ -15,7 +15,6 @@ function getTopArtists($num, $lfmMetro, $lfmCountry) {
 	$count = 0;
 	$ret =""; 
 	
-	$lastfmMethod;
 	global $lastfmApiKey;
 	global $lastfmMethod;
 	
