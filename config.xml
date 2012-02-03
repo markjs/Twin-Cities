@@ -2,13 +2,13 @@
 <config>
 	<shared>
 		<city1>
-			<name>Edinburgh></name>
+			<name>Edinburgh</name>
 			<country>United Kingdom</country>
 			<lat>55.953237</lat>
 			<long>-3.188438</long>
 		</city1>
 		<city2>
-			<name>San Diego></name>
+			<name>San Diego</name>
 			<country>United States</country>
 			<lat>32.7153292</lat>
 			<long>-117.1572551</long>
