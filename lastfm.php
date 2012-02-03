@@ -4,24 +4,32 @@ include("commonlib.php");
 
 loadConfig("config.xml");
 
-$lastfmMethod;
-$lastfmApiKey;
-$city1;
-$city1Country;
-$city2;
-$city2Country;
+global $city1;
+global $city1Country;
+global $city2;
+global $city2Country;
 
-echo $city1;
+echo "<pre>";
 
 function getTopArtists($num, $lfmMetro, $lfmCountry) {
-    $ret ="";
-    
-    $lastfmUri = "http://ws.audioscrobbler.com/2.0/?method=" . $lastfmMethod . "&metro=" . urlencode($lfmMetro) . "&country=" . urlencode($lfmCountry) . "&api_key=" . $lastfmApiKey;
-    $lastfmData = simplexml_load_string(acquire_file($lastfmUri));
+	$count = 0;
+	$ret =""; 
+	
+	$lastfmMethod;
+	global $lastfmApiKey;
+	global $lastfmMethod;
+	
+	@$lastfmUri = "http://ws.audioscrobbler.com/2.0/?method=" . $lastfmMethod . "&metro=" . urlencode($lfmMetro) . "&country=" . urlencode($lfmCountry) . "&api_key=" . $lastfmApiKey;
+	$lastfmData = simplexml_load_string(acquire_file($lastfmUri));
 	foreach($lastfmData->topartists->artist as $artistName) {
-		$ret .= $artistName->name . " ";
+		$count++;
+		//the casting is needed because SimpleXML objects are complex objects.
+		//http://www.php.net/manual/en/ref.simplexml.php#91057
+		$ret[] = (string) $artistName->name[0];
 	}
-	return(var_dump($ret));
+	
+	return($ret);
 }
-getTopArtists(10,"Edinburgh","United Kingdom");
+
+print_r(getTopArtists(10,$city1,$city1Country));
 ?>
