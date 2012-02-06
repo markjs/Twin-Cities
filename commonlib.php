@@ -48,9 +48,9 @@ function loadConfig($configFile) {
 	$city2Country = $configXml->shared->city2->country;
 
 	$city1Lat = $configXml->shared->city1->lat;
-	$city1Long = $configXml->shared->city1->long;
+	$city1Lng = $configXml->shared->city1->long;
 	$city2Lat = $configXml->shared->city2->lat;
-	$city2Long = $configXml->shared->city2->long;
+	$city2Lng = $configXml->shared->city2->long;
 	
 	
 	$lastfmMethod = $configXml->lastfm->method;
