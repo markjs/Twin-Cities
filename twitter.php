@@ -5,9 +5,9 @@
 include("commonlib.php");
 loadConfig("config.xml");
 
-$ed = $city1lat . "," . $city1long;
+$ed = $city1lat . "," . $city1lng;
 
-$sd = $city2lat . "," . $city2long;
+$sd = $city2lat . "," . $city2lng;
 
 $twitter2 = simplexml_load_string(acquire_file('http://search.twitter.com/search.atom?geocode=' . $sd . ',10mi&lang=en&include_entities=true&result_type=recent'));
 
