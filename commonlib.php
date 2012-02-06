@@ -32,7 +32,8 @@ function acquire_file($uri) {
 };
 
 function loadConfig() {
-
+	
+	global $configFile;
 	if (file_exists($configFile)) {
 	$configXml = simplexml_load_file($configFile);
 	
