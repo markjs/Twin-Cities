@@ -55,7 +55,7 @@ function loadConfig($configFile) {
 	
 	$lastfmMethod = $configXml->lastfm->method;
 	$lastfmApiKey = $configXml->lastfm->apiKey;
-	$lastfmResults = $configXML->lastfm->results;
+	$lastfmResults = $configXml->lastfm->results;
 	
 	$instagramClientId = $configXml->instagram->clientId;
 	$instagramClientSecret = $configXml->instagram->clientSecret;

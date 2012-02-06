@@ -1,6 +1,6 @@
 <?php
 
-include("commonlib.php");
+include_once("commonlib.php");
 
 loadConfig("config.xml");
 
@@ -40,4 +40,5 @@ function getTopArtists($num, $lfmMetro, $lfmCountry) {
 	return($ret);
 }
 
+print_r(getTopArtists(10,"Edinburgh","United Kingdom"));
 ?>
