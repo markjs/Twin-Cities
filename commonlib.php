@@ -49,6 +49,9 @@ function loadConfig($configFile) {
 	
 	$lastfmMethod = $configXml->lastfm->method;
 	$lastfmApiKey = $configXml->lastfm->apiKey;
+	
+	$instagramClientId = $configXml->instagram->clientId;
+	$instagramClientSecret = $configXml->instagram->clientSecret;
 }
 
 else die("Can't access configuration file.");
