@@ -14,12 +14,19 @@
 			<long>-117.1572551</long>
 		</city2>
 	</shared>
+	<news>
+		<base_uri>http://content.guardianapis.com/search?q=</base_uri>
+		<order-by>relevance</order-by>
+		<results>
+		<!--TODO: Excluded sections-->
+	</news>
 	<lastfm>
 		<apiKey>efb8ea84b7e2ed5fa230a15d080cef3d</apiKey>
 		<secret>fd7d5951826e506bfe5dce353e335157</secret>
 		<!--default method: get most popular current artists in the city
 			other methods *are* available-->
 		<method>geo.getmetroartistchart</method>
+		<results>5</results>
 	</lastfm>
 	<instagram>
 		<clientId>f14193a346d84a08b6cbf229b4022ed0</clientId>
