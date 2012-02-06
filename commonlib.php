@@ -40,7 +40,7 @@ function loadConfig($configFile) {
 	print_r($configXml);
 	echo "<br /><pre>";
 	 
-	global $city1, $city2, $city1Country, $city2Country, $lastfmMethod, $lastfmApiKey;
+	global $city1, $city2, $city1Country, $city2Country, $lastfmMethod, $lastfmApiKey, $lastfmResults;
 
 	$city1 = $configXml->shared->city1->name;
 	$city2 = $configXml->shared->city2->name;
@@ -49,6 +49,7 @@ function loadConfig($configFile) {
 	
 	$lastfmMethod = $configXml->lastfm->method;
 	$lastfmApiKey = $configXml->lastfm->apiKey;
+	$lastfmResults = $configXML->lastfm->results;
 	
 	$instagramClientId = $configXml->instagram->clientId;
 	$instagramClientSecret = $configXml->instagram->clientSecret;
