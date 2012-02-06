@@ -4,12 +4,19 @@ include("commonlib.php");
 
 loadConfig("config.xml");
 
-global $city1;
-global $city1Country;
-global $city2;
-global $city2Country;
-
 echo "<pre>";
+
+
+/**
+ *
+ * @global type $lastfmApiKey The last.fm API key.
+ * @global type $lastfmMethod The API method used
+ * @param type $num How many results are returned
+ * @param type $lfmMetro The city to use.
+ * @param type $lfmCountry The country the city is in.
+ * @return array
+ * @author Alexander Jegtnes
+ */
 
 function getTopArtists($num, $lfmMetro, $lfmCountry) {
 	$count = 0;
@@ -32,5 +39,4 @@ function getTopArtists($num, $lfmMetro, $lfmCountry) {
 	return($ret);
 }
 
-print_r(getTopArtists(10,$city1,$city1Country));
 ?>
