@@ -18,6 +18,7 @@
 		<base_uri>http://content.guardianapis.com/search?q=</base_uri>
 		<order-by>relevance</order-by>
 		<results>5</results>
+		<dates>last7days</dates>
 		<!--TODO: Excluded sections-->
 	</news>
 	<lastfm>
