@@ -15,8 +15,8 @@
 		</city2>
 	</shared>
 	<news>
-		<base_uri>http://content.guardianapis.com/search?q=</base_uri>
-		<order-by>relevance</order-by>
+		<baseUri>http://content.guardianapis.com/search?q=</baseUri>
+		<orderBy>relevance</orderBy>
 		<results>5</results>
 		<dates>last7days</dates>
 		<!--TODO: Excluded sections-->
