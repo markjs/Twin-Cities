@@ -35,6 +35,8 @@ function loadConfig($configFile) {
 
 	if (file_exists($configFile)) {
 	$configXml = simplexml_load_file($configFile);
+	
+	// this is for testing, remove before submission!
 	print_r($configXml);
 	echo "<br /><pre>";
 	 
