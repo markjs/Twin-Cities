@@ -16,6 +16,7 @@ echo "<pre>";
  * @param type $lfmCountry The country the city is in.
  * @return array
  * @author Alexander Jegtnes
+ * 
  */
 
 function getTopArtists($num, $lfmMetro, $lfmCountry) {
