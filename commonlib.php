@@ -64,6 +64,14 @@ function loadConfig() {
 	
 	$instagramClientId =        $configXml->instagram->clientId;
 	$instagramClientSecret =    $configXml->instagram->clientSecret;
+	
+	$config['city1'] = ['name'=>$city1, 'country'=>$city1Country, 'lat'=>$city1Lat, 'lng'=>$city1Lng];
+	$config['city2'] = ['name'=>$city2, 'country'=>$city2Country, 'lat'=>$city2Lat, 'lng'=>$city2Lng];
+	$config['news'] = ['baseUri'=>$newsBaseUri, 'orderBy'=>$newsOrderBy, 'numberOfResults'=>$newsResultNum, 'dates'=>$newsDates];
+	$config['lastfm'] = ['method'=>$lastfmMethod, 'apiKey'=>$lastfmApiKey, 'numberOfResults'=>$lastfmResults];
+	$config['instagram'] = ['clientId'=>$instagramClientId, 'clientSecret'=>$instagramClientSecret];
+	
+	
 }
 
 else die("Can't access configuration file.");
