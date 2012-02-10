@@ -41,25 +41,29 @@ function loadConfig() {
 	print_r($configXml);
 	echo "<br /><pre>";
 	 
-	global $city1, $city2, $city1Country, $city2Country, $lastfmMethod, $lastfmApiKey, $lastfmResults;
+	global $city1, $city2, $city1Country, $city2Country, $lastfmMethod, $lastfmApiKey, $lastfmResults, $newsBaseUri, $newsOrderBy, $newsResultNum, $newsDates;
 
-	$city1 = $configXml->shared->city1->name;
-	$city2 = $configXml->shared->city2->name;
-	$city1Country = $configXml->shared->city1->country;
-	$city2Country = $configXml->shared->city2->country;
+	$city1 =                    $configXml->shared->city1->name;
+	$city2 =                    $configXml->shared->city2->name;
+	$city1Country =             $configXml->shared->city1->country;
+	$city2Country =             $configXml->shared->city2->country;
 
-	$city1Lat = $configXml->shared->city1->lat;
-	$city1Lng = $configXml->shared->city1->long;
-	$city2Lat = $configXml->shared->city2->lat;
-	$city2Lng = $configXml->shared->city2->long;
+	$city1Lat =                 $configXml->shared->city1->lat;
+	$city1Lng =                 $configXml->shared->city1->long;
+	$city2Lat =                 $configXml->shared->city2->lat;
+	$city2Lng =                 $configXml->shared->city2->long;
 	
+        $newsBaseUri =              $configXml->news->baseUri;
+        $newsOrderBy =              $configXml->news->orderBy;
+        $newsResultNum =            $configXml->news->resultsNum;
+        $newsDates =                $configXml->news->dates;
 	
-	$lastfmMethod = $configXml->lastfm->method;
-	$lastfmApiKey = $configXml->lastfm->apiKey;
-	$lastfmResults = $configXml->lastfm->results;
+	$lastfmMethod =             $configXml->lastfm->method;
+	$lastfmApiKey =             $configXml->lastfm->apiKey;
+	$lastfmResults =            $configXml->lastfm->results;
 	
-	$instagramClientId = $configXml->instagram->clientId;
-	$instagramClientSecret = $configXml->instagram->clientSecret;
+	$instagramClientId =        $configXml->instagram->clientId;
+	$instagramClientSecret =    $configXml->instagram->clientSecret;
 }
 
 else die("Can't access configuration file.");
