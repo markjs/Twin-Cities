@@ -2,8 +2,6 @@
 
 include_once("commonlib.php");
 
-loadConfig("config.xml");
-
 echo "<pre>";
 
 
@@ -20,11 +18,14 @@ echo "<pre>";
  */
 
 function getTopArtists($num, $lfmMetro, $lfmCountry) {
+	
+	$config = loadConfig();
+	
 	$count = 0;
 	$ret =""; 
 	
-	global $lastfmApiKey;
-	global $lastfmMethod;
+	$lastfmApiKey = $config['lastfm']['apiKey'];
+	$lastfmMethod = $config['lastfm']['method'];
 	
 	@$lastfmUri = "http://ws.audioscrobbler.com/2.0/?method=" . $lastfmMethod . "&metro=" . urlencode($lfmMetro) . "&country=" . urlencode($lfmCountry) . "&api_key=" . $lastfmApiKey;
 	$lastfmData = simplexml_load_string(acquire_file($lastfmUri));

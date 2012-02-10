@@ -41,7 +41,7 @@ function loadConfig() {
 	print_r($configXml);
 	echo "<br /><pre>";
 	 
-	global $city1, $city2, $city1Country, $city2Country, $lastfmMethod, $lastfmApiKey, $lastfmResults, $newsBaseUri, $newsOrderBy, $newsResultNum, $newsDates;
+	// global $city1, $city2, $city1Country, $city2Country, $lastfmMethod, $lastfmApiKey, $lastfmResults, $newsBaseUri, $newsOrderBy, $newsResultNum, $newsDates;
 
 	$city1 =                    $configXml->shared->city1->name;
 	$city2 =                    $configXml->shared->city2->name;
@@ -64,10 +64,18 @@ function loadConfig() {
 	
 	$instagramClientId =        $configXml->instagram->clientId;
 	$instagramClientSecret =    $configXml->instagram->clientSecret;
+	
+	$config['city1'] = array('name'=>$city1, 'country'=>$city1Country, 'lat'=>$city1Lat, 'lng'=>$city1Lng);
+	$config['city2'] = array('name'=>$city2, 'country'=>$city2Country, 'lat'=>$city2Lat, 'lng'=>$city2Lng);
+	$config['news'] = array('baseUri'=>$newsBaseUri, 'orderBy'=>$newsOrderBy, 'numberOfResults'=>$newsResultNum, 'dates'=>$newsDates);
+	$config['lastfm'] = array('method'=>$lastfmMethod, 'apiKey'=>$lastfmApiKey, 'numberOfResults'=>$lastfmResults);
+	$config['instagram'] = array('clientId'=>$instagramClientId, 'clientSecret'=>$instagramClientSecret);
+	
+	return $config;
+
 }
 
 else die("Can't access configuration file.");
 	
 }
-
 ?>
