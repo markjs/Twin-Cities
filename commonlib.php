@@ -65,17 +65,17 @@ function loadConfig() {
 	$instagramClientId =        $configXml->instagram->clientId;
 	$instagramClientSecret =    $configXml->instagram->clientSecret;
 	
-	$config['city1'] = new Array('name'=>$city1, 'country'=>$city1Country, 'lat'=>$city1Lat, 'lng'=>$city1Lng);
-	$config['city2'] = new Array('name'=>$city2, 'country'=>$city2Country, 'lat'=>$city2Lat, 'lng'=>$city2Lng);
-	$config['news'] = new Array('baseUri'=>$newsBaseUri, 'orderBy'=>$newsOrderBy, 'numberOfResults'=>$newsResultNum, 'dates'=>$newsDates);
-	$config['lastfm'] = new Array('method'=>$lastfmMethod, 'apiKey'=>$lastfmApiKey, 'numberOfResults'=>$lastfmResults);
-	$config['instagram'] = new Array('clientId'=>$instagramClientId, 'clientSecret'=>$instagramClientSecret);
+	$config['city1'] = array('name'=>$city1, 'country'=>$city1Country, 'lat'=>$city1Lat, 'lng'=>$city1Lng);
+	$config['city2'] = array('name'=>$city2, 'country'=>$city2Country, 'lat'=>$city2Lat, 'lng'=>$city2Lng);
+	$config['news'] = array('baseUri'=>$newsBaseUri, 'orderBy'=>$newsOrderBy, 'numberOfResults'=>$newsResultNum, 'dates'=>$newsDates);
+	$config['lastfm'] = array('method'=>$lastfmMethod, 'apiKey'=>$lastfmApiKey, 'numberOfResults'=>$lastfmResults);
+	$config['instagram'] = array('clientId'=>$instagramClientId, 'clientSecret'=>$instagramClientSecret);
 	
 	return $config;
+
 }
 
 else die("Can't access configuration file.");
 	
 }
-
 ?>
