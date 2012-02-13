@@ -17,7 +17,7 @@ echo "<pre>";
  * 
  */
 
-function getTopArtists($num, $lfmMetro, $lfmCountry) {
+function lastFmGetTopArtists($num, $lfmMetro, $lfmCountry) {
 	
 	$config = loadConfig();
 	
@@ -41,5 +41,4 @@ function getTopArtists($num, $lfmMetro, $lfmCountry) {
 	return($ret);
 }
 
-print_r(getTopArtists(10,"Edinburgh","United Kingdom"));
 ?>
