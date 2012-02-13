@@ -17,7 +17,7 @@ echo "<pre>";
  * 
  */
 
-function lastFmGetTopArtists($num, $lfmMetro, $lfmCountry) {
+function lastfmGetTopArtists($num, $lfmMetro, $lfmCountry) {
 	
 	$config = loadConfig();
 	
