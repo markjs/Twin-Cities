@@ -1,0 +1,20 @@
+/* morning */
+
+body {
+	background-image:url("../../images/morningmutedbg.png");
+	
+}
+
+header, footer  {
+	background-image:url("../../images/morningheaderbg.png");
+}
+
+footer::before , footer::after {
+	background-image:url("../../images/morningmutedbg.png");
+}
+
+
+#ed  h1,h2,h3,h4,h5, #sd  h1,h2,h3,h4,h5  {
+	color:#466cc7;
+	font-family: 'PTSansBold';
+}

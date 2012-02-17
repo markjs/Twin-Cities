@@ -1,0 +1,20 @@
+/* evening */
+
+body {
+	background-image:url("../../images/eveningmutedbg.png");
+	
+}
+
+header, footer {
+	background-image:url("../../images/eveningheaderbg.png");
+}
+
+footer::before , footer::after {
+	background-image:url("../../images/eveningmutedbg.png");
+}
+
+
+#ed  h1,h2,h3,h4,h5, #sd  h1,h2,h3,h4,h5  {
+	color:#0e2b4b;
+	font-family: 'PTSansBold';
+}

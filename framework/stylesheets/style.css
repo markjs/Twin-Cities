@@ -1,0 +1,136 @@
+/*
+* Twin Cities V1.0
+* Copyright 2011, Brotherhood of the web.
+* 6/02/2012
+*/
+html {
+	overflow-x:hidden;
+}
+
+body {
+	background-repeat:repeat-x;
+	font-family: 'PTSansRegular';
+}
+
+.container {
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+-moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+
+}
+
+header {
+	background-repeat:repeat-x;
+	height:250px;
+	text-align: center;
+	margin:0;
+}
+
+
+
+header > h1 {
+margin-top:75px;
+
+}
+
+#title, #subtitle {
+	color:#fff;
+	font-family: 'PTSansCaptionBold';
+	
+}
+
+.sixteen.columns.nomargin {
+	margin:0;
+	padding:0;
+
+}
+
+#ed  h1,h2,h3,h4,h5, #sd  h1,h2,h3,h4,h5  {
+	color:#444;
+	font-family: 'PTSansBold';
+}
+
+#sd > h3, #ed > h3{
+	margin-top:10px;
+
+}
+
+#sd > h4, #ed > h4 {
+	text-align:center;
+}
+
+p#weather {
+	text-align:center;
+}
+
+
+#skyline {
+	margin-top:20px;
+	height:88px;
+	width:100%;
+	background-image:url('../images/skyline.png');
+	background-repeat:repeat-x;
+	background-position:center; 
+
+}
+
+#undercity {
+	height:35px;
+	width:100%;
+	background-image:url('../images/footer.png');
+	background-repeat:repeat-x;
+	background-position:center; 
+	z-index:2;
+}
+
+
+#footerbg {
+	background-repeat:repeat-x;
+	height:120px;
+	width:100%;
+	z-index:-100;
+	margin-top:-120px;
+}
+
+
+#footerr > h6, #footerl > h6{
+	color:#fff;
+	font-family: 'PTSansRegular';
+}
+
+a {
+	color:#ccc;
+	text-decoration:none;
+}
+
+a:visited  {
+	color:#ccc;
+}
+
+a:hover {
+	color:#fff;
+	text-decoration:underline;
+}
+
+a:active {
+	color:#ccc;
+}
+
+footer {
+	position:relative;
+}
+
+footer::before , footer::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 9999px;   /* some huge width */
+}
+
+footer::before {
+   right: 100%;
+}
+footer::after {
+   left: 100%;
+}

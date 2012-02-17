@@ -1,0 +1,21 @@
+/* night */
+
+body {
+	background-image:url("../../images/nightmutedbg.png");
+	
+}
+
+header, footer  {
+	background-image:url("../../images/nightheaderbg.png");
+}
+
+footer::before , footer::after {
+	background-image:url("../../images/nightmutedbg.png");
+}
+
+
+
+#ed  h1,h2,h3,h4,h5, #sd  h1,h2,h3,h4,h5  {
+	color:#0c2458;
+	font-family: 'PTSansBold';
+}

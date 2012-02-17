@@ -1,0 +1,20 @@
+/* afternoon */
+
+body {
+	background-image:url("../../images/afternoonmutedbg.png");
+	
+}
+
+header, footer {
+	background-image:url("../../images/afternoonheaderbg.png");
+}
+
+footer::before , footer::after {
+	background-image:url("../../images/afternoonmutedbg.png");
+}
+
+
+#ed  h1,h2,h3,h4,h5, #sd  h1,h2,h3,h4,h5  {
+	color:#362c3f;
+	font-family: 'PTSansBold';
+}
