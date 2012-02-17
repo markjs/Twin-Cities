@@ -3,7 +3,6 @@
 <?php
 
 include_once("commonlib.php");
-echo "<pre>";
 $config = loadConfig();
 
 function twitterGetTweets($lat, $lng) { 
@@ -21,16 +20,6 @@ $twitterFeed = simplexml_load_string(acquire_file('http://search.twitter.com/sea
 	}
 return $post;
 }
-
-print_r (twitterGetTweets($config['city1']['lat'], $config['city1']['lng']));
-
-
-
-
-
-
-
-
 
  /* $twitter = simplexml_load_string(acquire_file('http://search.twitter.com/search.atom?geocode=32.71533,-117.157256,10mi&lang=en&include_entities=true&result_type=recent')); */
 ?>

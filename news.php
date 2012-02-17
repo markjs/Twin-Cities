@@ -7,11 +7,9 @@ function acquireNews($searchTerm) {
     $returnContent="";
 	$newsConfig = $config['news'];
 	
-    global $newsBaseUri, $newsOrderBy, $newsResultNum, $newsDates;
     $newsUri = $newsConfig['baseUri'] . "?format=xml&q=" . urlencode($searchTerm) . "&order-by=" . urlencode($newsConfig['orderBy']) . "&page-size=" . $newsConfig['numberOfResults'] . "&date-id=" . urlencode("date/" . $newsConfig['dates']);
     $newsData = simplexml_load_string(acquire_file($newsUri));
-	echo $newsUri . "<pre>";
-	//print_r($newsdata->results)
+	
 	foreach($newsData->results as $newsNode) {
 		foreach ($newsNode as $newsDetail) {
 			$returnContent[] = array((string) 'title' => $newsDetail['web-title'], 'url' => ($newsDetail['web-url']), 'date' => $newsDetail['web-publication-date']);
@@ -19,7 +17,5 @@ function acquireNews($searchTerm) {
 	}
 	return $returnContent;
 }
-
-print_r(acquireNews("Edinburgh"));
 
 ?>

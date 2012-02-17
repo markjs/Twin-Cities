@@ -3,15 +3,15 @@ include_once("commonlib.php");
 //include_once("instagram.php");
 include_once("lastfm.php");
 //include_once("maps.php");
-//include_once("news.php");
-//include_once("twitter.php");
+include_once("news.php");
+include_once("twitter.php");
 $config = loadConfig();
 $city1 = $config['city1']['name'];
 $country1 = $config['city1']['country'];
 $city2 = $config['city2']['name'];
 $country2 = $config['city2']['country'];
-$topArtists1 = lastfmGetTopArtists(10, $city1, $country1);
-$topArtists2 = lastfmGetTopArtists(10, $city2, $country2);
+
+lastfmGetTopArtists(10, $city2, $country2);
 ?>
 
 <!DOCTYPE html>
@@ -80,7 +80,11 @@ $topArtists2 = lastfmGetTopArtists(10, $city2, $country2);
 
 			<!-- News - Alex Jegtnes -->
 			<h4>News</h4>
-			<p>One dead after anchorman throwdown turns violent.</p>
+			<?php
+				foreach(acquireNews($city2) as $news) {
+					echo "<a href=\"" . $news['url'] . "\">" . $news['title'] . "</a><br />";
+				}
+			?>
 			<!-- End News -->
 			
 			<!-- Google Maps - Charlie Tizard -->
@@ -90,7 +94,12 @@ $topArtists2 = lastfmGetTopArtists(10, $city2, $country2);
 			
 			<!-- Twitter - Charlie Tizard -->
 			<h4>Twitter</h4>
-			<p>LOL I ate a steak.</p>
+			<?php
+			foreach(twitterGetTweets($config['city2']['lat'],$config['city2']['lng']) as $c2t) {
+				echo "<p>" . $c2t['authorname'] . ": " . $c2t['content'] . "</p>";
+			}
+			?>
+			
 			<!-- End Twitter -->
 			
 			<!-- Instagram - Mark Smith -->
@@ -101,8 +110,8 @@ $topArtists2 = lastfmGetTopArtists(10, $city2, $country2);
 			<!-- Last.fm - Alex Jegtnes -->
 			<h4>Last.fm</h4>
 			<p><?php 
-				foreach($topArtists1 as $ta1) {
-					echo $ta1 . "<br />";
+				foreach(lastfmGetTopArtists(10, $city2, $country2) as $ta) {
+					echo $ta . "<br />";
 				}
 			?></p>
 			<!-- End Last.fm -->
@@ -120,7 +129,11 @@ $topArtists2 = lastfmGetTopArtists(10, $city2, $country2);
 			
 			<!-- News - Alex Jegtnes -->
 			<h4>News</h4>
-			<p>One dead after football throwdown turns violent.</p>
+			<?php
+				foreach(acquireNews($city1) as $news) {
+					echo "<a href=\"" . $news['url'] . "\">" . $news['title'] . "</a><br />";
+				}
+			?>
 			<!-- End News -->
 			
 			<!-- Google Maps - Charlie Tizard -->
@@ -130,7 +143,11 @@ $topArtists2 = lastfmGetTopArtists(10, $city2, $country2);
 			
 			<!-- Twitter - Charlie Tizard -->
 			<h4>Twitter</h4>
-			<p>I just drank an irnbru</p>
+			<?php
+			foreach(twitterGetTweets($config['city1']['lat'],$config['city1']['lng']) as $c1t) {
+				echo "<p>" . $c1t['authorname'] . ": " . $c1t['content'] . "</p>";
+			}
+			?>
 			<!-- End Twitter -->
 			
 			<!-- Instagram - Mark Smith -->
@@ -141,8 +158,8 @@ $topArtists2 = lastfmGetTopArtists(10, $city2, $country2);
 			<!-- Last.fm - Alex Jegtnes -->
 			<h4>Last.fm</h4>
 			<p><?php 
-				foreach($topArtists2 as $ta2) {
-					echo $ta2 . "<br />";
+				foreach(lastfmGetTopArtists(10, $city1, $country1) as $ta) {
+					echo $ta . "<br />";
 				}
 			?></p>
 			<!-- End Last.fm -->
