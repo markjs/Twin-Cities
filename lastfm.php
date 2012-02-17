@@ -2,19 +2,14 @@
 
 include_once("commonlib.php");
 
-echo "<pre>";
-
-
 /**
  *
- * @global type $lastfmApiKey The last.fm API key.
- * @global type $lastfmMethod The API method used
- * @param type $num How many results are returned
- * @param type $lfmMetro The city to use.
- * @param type $lfmCountry The country the city is in.
- * @return array
+ * @param type $num The number of top artists to return
+ * @param type $lfmMetro The city to get the top artists from
+ * @param type $lfmCountry The country the city is in
  * @author Alexander Jegtnes
- * 
+ * @version 1.0
+ * @return array 
  */
 
 function lastfmGetTopArtists($num, $lfmMetro, $lfmCountry) {
