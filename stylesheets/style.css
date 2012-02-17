@@ -26,8 +26,6 @@ header {
 	margin:0;
 }
 
-
-
 header > h1 {
 margin-top:75px;
 
@@ -40,9 +38,9 @@ margin-top:75px;
 }
 
 .sixteen.columns.nomargin {
-	margin:0;
-	padding:0;
-
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 #ed  h1,h2,h3,h4,h5, #sd  h1,h2,h3,h4,h5  {

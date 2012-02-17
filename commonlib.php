@@ -13,7 +13,7 @@ function isInUwe() {
 }
 
 function acquire_file($uri) {
-	if (isInUwe()) {
+	if (isInUwe() == true) {
 		$context = stream_context_create(
 		 //TODO: Use cURL
 		 array('http'=>
@@ -37,10 +37,6 @@ function loadConfig() {
 	if (file_exists($configFile)) {
 	$configXml = simplexml_load_file($configFile);
 	
-	// this is for testing, remove before submission!
-	print_r($configXml);
-	echo "<br /><pre>";
-	 
 	// global $city1, $city2, $city1Country, $city2Country, $lastfmMethod, $lastfmApiKey, $lastfmResults, $newsBaseUri, $newsOrderBy, $newsResultNum, $newsDates;
 
 	$city1 =                    $configXml->shared->city1->name;
