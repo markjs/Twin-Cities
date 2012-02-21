@@ -31,11 +31,15 @@ function lastfmGetTopArtists($num, $lfmMetro, $lfmCountry) {
 		if ($count <= $num) {
 			//the casting is needed because SimpleXML objects are complex objects.
 			//http://www.php.net/manual/en/ref.simplexml.php#91057
-			$ret[] = (string) $artistName->name[0];
+			$ret[] = array((string) 'name' => $artistName->name[0], 'image' => $artistName->image[2]);
 		}
 	}
-	
 	return($ret);
 }
+
+//echo "<pre>";
+//print_r(lastfmGetTopArtists(10, "Edinburgh", "United Kingdom"));
+//echo "</pre>";
+
 
 ?>
