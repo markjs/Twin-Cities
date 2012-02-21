@@ -19,23 +19,23 @@ footer::before , footer::after {
 	font-family: 'PTSansBold';
 }
 
-p a {
+section a {
     color:#0e2b4b;
    
 }
 
-p a:visited {
+section a:visited {
     color:#0e2b4b;
    
 }
 
-p a:hover {
+section a:hover {
     color:#0e2b4b;
     text-decoration:underline;
    
 }
 
-p a:active {
+section a:active {
     color:#0e2b4b;
    
 }

@@ -69,7 +69,7 @@
     .container .offset-by-fourteen              { padding-left: 840px; }
     .container .offset-by-fifteen               { padding-left: 900px; }
 
-	#sd > iframe, #ed > iframe {
+	section iframe {
 		border:0;
 		margin:0;
 		width:460px;
@@ -141,7 +141,7 @@
         .container .offset-by-fourteen              { padding-left: 672px; }
         .container .offset-by-fifteen               { padding-left: 720px; }
 		
-		#sd > iframe, #ed > iframe {
+		section iframe {
 			border:0;
 			margin:0;
 			width:365px;
@@ -197,7 +197,7 @@
         .container .offset-by-fourteen,
         .container .offset-by-fifteen { padding-left: 0; }
 		
-		#sd > iframe, #ed > iframe {
+		section iframe {
 			border:0;
 			margin:0;
 			width:300px;
@@ -252,7 +252,7 @@
         .container .one-third.column,
         .container .two-thirds.column { width: 420px; }
 		
-		#sd > iframe, #ed > iframe {
+		section iframe {
 			border:0;
 			margin:0;
 			width:420px;

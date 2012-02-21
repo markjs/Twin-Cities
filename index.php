@@ -73,25 +73,34 @@ lastfmGetTopArtists(10, $city2, $country2);
 			<h3>San Diego</h3>
 			<p>San Diego (which of course in German means a whale's vagina) is the eighth-largest city in the United States and second-largest city in California. The city is located on the coast of the Pacific Ocean in Southern California, immediately adjacent to the Mexican border. The birthplace of California, San Diego is known for its mild year-round climate and its natural deep-water harbor.</p>
 			
+			<section>
 			<!-- Weather - Mark Smith -->		
 			<h4>Weather</h4>
 			<p id="weather">24, windy.</p>
 			<!-- End Weather -->	
-
+			</section>
+			
+			<section>
 			<!-- News - Alex Jegtnes -->
 			<h4>News</h4>
+			<ul>
 			<?php
 				foreach(acquireNews($city2) as $news) {
-					echo "<a href=\"" . $news['url'] . "\">" . $news['title'] . "</a><br />";
+					echo "<li><a href=\"" . $news['url'] . "\">" . $news['title'] . "</a></li>";
 				}
 			?>
 			<!-- End News -->
+			</ul>
+			</section>
 			
+			<section>
 			<!-- Google Maps - Charlie Tizard -->
 			<h4>Map</h4>
 			<iframe frameborder=0 marginwidth=0 marginheight=0 border=0 src="http://www.google.com/uds/modules/elements/mapselement/iframe.html?maptype=roadmap&latlng=32.715329%2C-117.157255&mlatlng=32.715329%2C-117.157255&maddress1=San%20Diego%2C%20CA&zoom=12&mtitle=San%20Diego%2C%20CA&element=true" scrolling="no" allowtransparency="true"></iframe>
 			<!-- End Google Maps -->
+			</section>
 			
+			<section>
 			<!-- Twitter - Charlie Tizard -->
 			<h4>Twitter</h4>
 			<?php
@@ -99,14 +108,17 @@ lastfmGetTopArtists(10, $city2, $country2);
 				echo "<p><a href='" . $c2t['authorurl'] . "'>" . $c2t['authorname'] . ":</a> " . $c2t['content'] . "</p>";
 			}
 			?>
-			
 			<!-- End Twitter -->
+			</section>
 			
+			<section>
 			<!-- Instagram - Mark Smith -->
 			<h4>Instagram</h4>
 			<p>picture of a steak</p>
 			<!-- End Instagram -->
+			</section>
 			
+			<section>
 			<!-- Last.fm - Alex Jegtnes -->
 			<h4>Last.fm</h4>
 			<p><?php 
@@ -115,32 +127,41 @@ lastfmGetTopArtists(10, $city2, $country2);
 				}
 			?></p>
 			<!-- End Last.fm -->
-			
+			</section>
 		</div>
 
 		<div class="eight columns" id="ed">
 			<h3>Edinburgh</h3>
-			<p>Edinburgh is the capital city of Scotland, the second largest city in Scotland, and the eighth most populous in the United Kingdom. The City of Edinburgh Council governs one of Scotland's 32 local government council areas. The council area includes urban Edinburgh and a 30 square miles (78 km2) rural area. Located in the south-east of Scotland, Edinburgh lies on the east coast of the Central Belt.</p>
+			<p>Edinburgh is the capital city of Scotland, the second largest city in Scotland, and the eighth most populous in the United Kingdom. The City of Edinburgh Council governs one of Scotland's 32 local government council areas. The council area includes urban Edinburgh and a 30 square miles (78 km2) rural area. Located in the south-east of Scotland, Edinburgh lies on the east coast of the Central Belt.</p>			
 			
+			<section>
 			<!-- Weather - Mark Smith -->
 			<h4>Weather</h4>
 			<p id="weather">24, windy.</p>
 			<!-- End Weather -->
+			</section>
 			
+			<section>
 			<!-- News - Alex Jegtnes -->
 			<h4>News</h4>
+			<ul>
 			<?php
 				foreach(acquireNews($city1) as $news) {
-					echo "<a href=\"" . $news['url'] . "\">" . $news['title'] . "</a><br />";
+					echo "<li><a href=\"" . $news['url'] . "\">" . $news['title'] . "</a></li>";
 				}
 			?>
+			</ul>
 			<!-- End News -->
+			</section>
 			
+			<section>
 			<!-- Google Maps - Charlie Tizard -->
 			<h4>Map</h4>
 			<iframe frameborder=0 marginwidth=0 marginheight=0 border=0 src="http://www.google.com/uds/modules/elements/mapselement/iframe.html?maptype=roadmap&latlng=55.953252%2C-3.188267&mlatlng=55.953252%2C-3.188267&maddress1=Edinburgh%2C%20Midlothian&maddress2=UK&zoom=12&mtitle=Edinburgh%2C%20Midlothian&element=true" scrolling="no" allowtransparency="true"></iframe>
 			<!-- End Google Maps -->
+			</section>
 			
+			<section>
 			<!-- Twitter - Charlie Tizard -->
 			<h4>Twitter</h4>
 			<?php
@@ -149,12 +170,16 @@ lastfmGetTopArtists(10, $city2, $country2);
 			}
 			?>
 			<!-- End Twitter -->
+			</section>
 			
+			<section>
 			<!-- Instagram - Mark Smith -->
 			<h4>Instagram</h4>
 			<p>picture of irnbru</p>
 			<!-- End Instagram -->
+			</section>
 			
+			<section>
 			<!-- Last.fm - Alex Jegtnes -->
 			<h4>Last.fm</h4>
 			<p><?php 
@@ -163,6 +188,7 @@ lastfmGetTopArtists(10, $city2, $country2);
 				}
 			?></p>
 			<!-- End Last.fm -->
+			</section>
 			
 		</div>
 		
