@@ -6,12 +6,26 @@
 			<country>United Kingdom</country>
 			<lat>55.953237</lat>
 			<long>-3.188438</long>
+                        <poi>
+                             <place lat="some number" long="some number">derpyderp</place>
+                             <place lat="some number" long="some number">derpyderp</place>
+                             <place lat="some number" long="some number">derpyderp</place>    
+                             <place lat="some number" long="some number">derpyderp</place>
+                             <place lat="some number" long="some number">derpyderp</place>
+                        </poi>
 		</city1>
 		<city2>
 			<name>San Diego</name>
 			<country>United States</country>
 			<lat>32.7153292</lat>
 			<long>-117.1572551</long>
+                        <poi>
+                             <place lat="some number" long="some number">Castle</place>
+                             <place lat="some number" long="some number">Royal Mile</place>
+                             <place lat="some number" long="some number">Waverley</place>    
+                             <place lat="some number" long="some number">derpyderp</place>
+                             <place lat="some number" long="some number">derpyderp</place>
+                        </poi>
 		</city2>
 	</shared>
 	<news>
