@@ -19,7 +19,7 @@ function instagramGetLatestPhotos($lat,$lng) {
 		$html += $entry->images->standard_resolution->url;
 	}
 	
-	return $response;
+	return $html;
 }
 echo "<pre>";
 
