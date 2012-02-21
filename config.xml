@@ -6,13 +6,28 @@
 			<country>United Kingdom</country>
 			<lat>55.953237</lat>
 			<long>-3.188438</long>
+                        <poi>
+                            <marker lat="55.948683" lng="-3.200197" html="Some stuff to display in theFirst Info Window" label="Edinburgh Castle"/>
+                            <marker lat="55.955093" lng="-3.18861" html="Some stuff to display in theFirst Info Window" label="Royal Mile"/>
+                            <marker lat="55.952391" lng="-3.188227" html="Some stuff to display in theFirst Info Window" label="Waverley Railway Station"/>
+                            <marker lat="55.949581" lng="-3.1914" html="Some stuff to display in theFirst Info Window" label="St Giles Cathedral"/>
+                            <marker lat="55.950131" lng="-3.180531" html="Some stuff to display in theFirst Info Window" label="Museum of Edinburgh"/>
+                        </poi>
 		</city1>
 		<city2>
 			<name>San Diego</name>
 			<country>United States</country>
 			<lat>32.7153292</lat>
 			<long>-117.1572551</long>
-		</city2>
+                        <poi>
+                            <marker lat="32.732419" lng="-117.197342" html="Some stuff to display in theFirst Info Window" label="San Diego Airport"/>
+                            <marker lat="32.736245" lng="-117.15168" html="Some stuff to display in theirst Info Window" label="San Diego Zoo"/>
+                            <marker lat="32.754293" lng="-117.165928" html="Some stuff to display in theFirst Info Window" label="San Diega Hospital"/>
+                            <marker lat="32.709528" lng="-117.169104" html="Some stuff to display in theFirst Info Window" label="
+Manchester Grand Hyatt"/>
+                            <marker lat="55.950131" lng="-3.180531" html="Some stuff to display in theFirst Info Window" label="Museum of Edinburgh"/>
+                        </poi>
+		</city2>,
 	</shared>
 	<news>
 		<baseUri>http://content.guardianapis.com/search</baseUri>
@@ -32,5 +47,6 @@
 	<instagram>
 		<clientId>f14193a346d84a08b6cbf229b4022ed0</clientId>
 		<clientSecret>4ebe97f740a04b34ab0633cc88ce112d</clientSecret>
+		<baseUri>https://api.instagram.com/v1/media/search?</baseUri>
 	</instagram>
 </config>
