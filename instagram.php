@@ -17,8 +17,8 @@ function instagramGetLatestPhotos($lat,$lng) {
 	
 	$html = "";
 	
-	$html = foreach ($response->data as $entry) {
-		return $entry->images->standard_resolution->url;
+	foreach ($response->data as $entry) {
+		$html .= $entry->images->standard_resolution->url;
 	}
 	
 	return $html;
