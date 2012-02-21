@@ -1,6 +1,6 @@
 <?php
 
-include("commonlib.php");
+include_once("commonlib.php");
 $config = loadConfig("config.xml");
 $city1 = $config['city1'];
 $city2 = $config['city2'];

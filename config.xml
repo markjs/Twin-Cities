@@ -20,11 +20,11 @@
 			<lat>32.7153292</lat>
 			<long>-117.1572551</long>
                         <poi>
-                             <place lat="some number" long="some number">Castle</place>
-                             <place lat="some number" long="some number">Royal Mile</place>
-                             <place lat="some number" long="some number">Waverley</place>    
-                             <place lat="some number" long="some number">derpyderp</place>
-                             <place lat="some number" long="some number">derpyderp</place>
+                            <marker lat="43.65654" lng="-79.90138" html="Some stuff to display in the<br>First Info Window" label="Edinburgh Castle"/>
+                            <marker lat="43.65654" lng="-79.90138" html="Some stuff to display in the<br>First Info Window" label="Royal Mile"/>
+                            <marker lat="43.65654" lng="-79.90138" html="Some stuff to display in the<br>First Info Window" label="Waverley"/>
+                            <marker lat="43.65654" lng="-79.90138" html="Some stuff to display in the<br>First Info Window" label="St Giles Cathedral"/>
+                            <marker lat="43.65654" lng="-79.90138" html="Some stuff to display in the<br>First Info Window" label="Museum of Edinburgh"/>
                         </poi>
 		</city2>
 	</shared>
