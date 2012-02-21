@@ -18,3 +18,24 @@ footer::before , footer::after {
 	color:#0e2b4b;
 	font-family: 'PTSansBold';
 }
+
+p a {
+    color:#0e2b4b;
+   
+}
+
+p a:visited {
+    color:#0e2b4b;
+   
+}
+
+p a:hover {
+    color:#0e2b4b;
+    text-decoration:underline;
+   
+}
+
+p a:active {
+    color:#0e2b4b;
+   
+}

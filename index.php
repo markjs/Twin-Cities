@@ -96,7 +96,7 @@ lastfmGetTopArtists(10, $city2, $country2);
 			<h4>Twitter</h4>
 			<?php
 			foreach(twitterGetTweets($config['city2']['lat'],$config['city2']['lng']) as $c2t) {
-				echo "<p>" . $c2t['authorname'] . ": " . $c2t['content'] . "</p>";
+				echo "<p><a href='" . $c2t['authorurl'] . "'>" . $c2t['authorname'] . ":</a> " . $c2t['content'] . "</p>";
 			}
 			?>
 			
@@ -144,8 +144,8 @@ lastfmGetTopArtists(10, $city2, $country2);
 			<!-- Twitter - Charlie Tizard -->
 			<h4>Twitter</h4>
 			<?php
-			foreach(twitterGetTweets($config['city1']['lat'],$config['city1']['lng']) as $c1t) {
-				echo "<p>" . $c1t['authorname'] . ": " . $c1t['content'] . "</p>";
+			foreach(twitterGetTweets($config['city1']['lat'],$config['city1']['lng']) as $c2t) {
+				echo "<p><a href='" . $c2t['authorurl'] . "'>" . $c2t['authorname'] . ":</a> " . $c2t['content'] . "</p>";
 			}
 			?>
 			<!-- End Twitter -->
