@@ -1,13 +1,22 @@
 <?php
+
 include_once("commonlib.php");
-loadConfig("config.xml");
+
+/**
+ *
+ * @param type $searchTerm The term to search for in the Guardian Open API
+ * @author Alexander Jegtnes <alexander2.jegtnes@live.uwe.ac.uk>
+ * @version 1.0
+ * @return array Returns an associative array of the news title, the url and the publication date
+ */
 
 function acquireNews($searchTerm) {
 	$config = loadConfig();
     $returnContent="";
-	$newsConfig = $config['news'];
 	
-    $newsUri = $newsConfig['baseUri'] . "?format=xml&q=" . urlencode($searchTerm) . "&order-by=" . urlencode($newsConfig['orderBy']) . "&page-size=" . $newsConfig['numberOfResults'] . "&date-id=" . urlencode("date/" . $newsConfig['dates']);
+	//assembles the request URI to the API
+    $newsUri = $config['news']['baseUri'] . "?format=xml&q=" . urlencode($searchTerm) . "&order-by=" . urlencode($config['news']['orderBy']) . "&page-size=" . $config['news']['numberOfResults'] . "&date-id=" . urlencode("date/" . $config['news']['dates']);
+	
     $newsData = simplexml_load_string(acquire_file($newsUri));
 	
 	foreach($newsData->results as $newsNode) {

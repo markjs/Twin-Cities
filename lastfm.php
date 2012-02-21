@@ -9,7 +9,7 @@ include_once("commonlib.php");
  * @param type $lfmCountry The country the city is in
  * @author Alexander Jegtnes
  * @version 1.0
- * @return array 
+ * @return array Returns a simple, indexed array with the top artists
  */
 
 function lastfmGetTopArtists($num, $lfmMetro, $lfmCountry) {
@@ -22,7 +22,9 @@ function lastfmGetTopArtists($num, $lfmMetro, $lfmCountry) {
 	$lastfmApiKey = $config['lastfm']['apiKey'];
 	$lastfmMethod = $config['lastfm']['method'];
 	
+	//assembles the request URI for the API
 	@$lastfmUri = "http://ws.audioscrobbler.com/2.0/?method=" . $lastfmMethod . "&metro=" . urlencode($lfmMetro) . "&country=" . urlencode($lfmCountry) . "&api_key=" . $lastfmApiKey;
+	
 	$lastfmData = simplexml_load_string(acquire_file($lastfmUri));
 	foreach($lastfmData->topartists->artist as $artistName) {
 		$count++;
