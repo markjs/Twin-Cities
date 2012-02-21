@@ -5,15 +5,25 @@ include_once("commonlib.php");
 
 // https://api.instagram.com/v1/media/search?lat=48.858844&lng=2.294351&access_token=ACCESS-TOKEN
 
-function instagramGetLatestPhotos($num) {
+function instagramGetLatestPhotos($lat,$lng) {
 	
 	$config = loadConfig();
 	
-	$instagramConfig = $config['instagram'];
+	$instagram = $config['instagram'];
 	
+	$request = $instagram['baseUri'] . "lat=" . $lat . "&lng=" . $lng . "&client_id=" . $instagram['clientId'];
+	
+	$response = json_decode(acquire_file($request));
+	
+	foreach ($response->data as $entry) {
+		$html += $entry->images->standard_resolution->url;
+	}
+	
+	return $response;
 }
+echo "<pre>";
 
-print_r(instagramGetLatestPhotos(10));
+print_r(instagramGetLatestPhotos(32.7153292,-117.1572551));
 
 
 ?>

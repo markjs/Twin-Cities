@@ -32,5 +32,6 @@
 	<instagram>
 		<clientId>f14193a346d84a08b6cbf229b4022ed0</clientId>
 		<clientSecret>4ebe97f740a04b34ab0633cc88ce112d</clientSecret>
+		<baseUri>https://api.instagram.com/v1/media/search?</baseUri>
 	</instagram>
 </config>

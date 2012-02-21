@@ -65,7 +65,7 @@ function loadConfig() {
 	$config['city2'] = array('name'=>$city2, 'country'=>$city2Country, 'lat'=>$city2Lat, 'lng'=>$city2Lng);
 	$config['news'] = array('baseUri'=>$newsBaseUri, 'orderBy'=>$newsOrderBy, 'numberOfResults'=>$newsResultNum, 'dates'=>$newsDates);
 	$config['lastfm'] = array('method'=>$lastfmMethod, 'apiKey'=>$lastfmApiKey, 'numberOfResults'=>$lastfmResults);
-	$config['instagram'] = array('clientId'=>$instagramClientId, 'clientSecret'=>$instagramClientSecret);
+	$config['instagram'] = array('clientId'=>$instagramClientId, 'clientSecret'=>$instagramClientSecret, 'baseUri'=>$configXml->instagram->baseUri);
 	
 	return $config;
 
