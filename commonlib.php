@@ -51,7 +51,7 @@ function loadConfig() {
 	
         $newsBaseUri =              $configXml->news->baseUri;
         $newsOrderBy =              $configXml->news->orderBy;
-        $newsResultNum =            $configXml->news->resultsNum;
+        $newsResultNum =            $configXml->news->resultNum;
         $newsDates =                $configXml->news->dates;
 	
 	$lastfmMethod =             $configXml->lastfm->method;

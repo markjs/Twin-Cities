@@ -10,8 +10,6 @@ $city1 = $config['city1']['name'];
 $country1 = $config['city1']['country'];
 $city2 = $config['city2']['name'];
 $country2 = $config['city2']['country'];
-
-lastfmGetTopArtists(10, $city2, $country2);
 ?>
 
 <!DOCTYPE html>
@@ -85,9 +83,9 @@ lastfmGetTopArtists(10, $city2, $country2);
 			<h4>News</h4>
 			<ul>
 			<?php
-				foreach(acquireNews($city2) as $news) {
+				/*foreach(acquireNews($city2) as $news) {
 					echo "<li><a href=\"" . $news['url'] . "\">" . $news['title'] . "</a></li>";
-				}
+				}*/
 			?>
 			<!-- End News -->
 			</ul>
@@ -122,9 +120,9 @@ lastfmGetTopArtists(10, $city2, $country2);
 			<!-- Last.fm - Alex Jegtnes -->
 			<h4>Last.fm</h4>
 			<p><?php 
-				foreach(lastfmGetTopArtists(10, $city2, $country2) as $ta) {
-					echo $ta . "<br />";
-				}
+			foreach(lastfmGetTopArtists(10, $city2, $country2) as $lfm) {
+				echo("<li><img src=\"" . $lfm['image'] . "\" />" . $lfm['name'] . "</li>");
+			}
 			?></p>
 			<!-- End Last.fm -->
 			</section>
@@ -146,9 +144,9 @@ lastfmGetTopArtists(10, $city2, $country2);
 			<h4>News</h4>
 			<ul>
 			<?php
-				foreach(acquireNews($city1) as $news) {
+				/*foreach(acquireNews($city1) as $news) {
 					echo "<li><a href=\"" . $news['url'] . "\">" . $news['title'] . "</a></li>";
-				}
+				}*/
 			?>
 			</ul>
 			<!-- End News -->
@@ -183,8 +181,8 @@ lastfmGetTopArtists(10, $city2, $country2);
 			<!-- Last.fm - Alex Jegtnes -->
 			<h4>Last.fm</h4>
 			<p><?php 
-				foreach(lastfmGetTopArtists(10, $city1, $country1) as $ta) {
-					echo $ta . "<br />";
+				foreach(lastfmGetTopArtists(10, $city1, $country1) as $lfm) {
+					echo("<li><img src=\"" . $lfm['image'] . "\" />" . $lfm['name'] . "</li>");
 				}
 			?></p>
 			<!-- End Last.fm -->
