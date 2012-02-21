@@ -16,15 +16,15 @@ function instagramGetLatestPhotos($lat,$lng) {
 	$response = json_decode(acquire_file($request));
 	
 	$html = "";
-	
-	for ($i=0; $i < 5; $i++) { 
-		$entry = $response->$i;
-		$html .= "<img src=\"" . $entry->images->standard_resolution->url . "\" alt=\"" . $entry->caption->text . "\"/>";
+
+	$i = 0;
+
+	foreach ($response->data as $entry) {
+		if ($i < 5) {
+			$html .= "<img src=\"" . $entry->images->standard_resolution->url . "\" alt=\"" . $entry->caption->text . "\"/>";
+		}
+		$i++;
 	}
-	
-	// foreach ($response->data as $entry) {
-	// 	$html .= "<img src=\"" . $entry->images->standard_resolution->url . "\" alt=\"" . $entry->caption->text . "\"/>";
-	// }
 	
 	return $html;
 }
