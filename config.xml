@@ -29,7 +29,7 @@ Manchester Grand Hyatt"/>
                         </poi>
 		</city2>,
 	</shared>
-	<news
+	<news>
 		<baseUri>http://content.guardianapis.com/search</baseUri>
 		<orderBy>relevance</orderBy>
 		<resultNum>5</resultNum>
