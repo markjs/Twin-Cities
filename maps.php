@@ -35,7 +35,7 @@ $city2 = $config['city2'];
 
       // ==== Create a KML Overlay ====
     
-      var kml = new GGeoXml("http://www.cems.uwe.ac.uk/~c2-tizard/dsa/places.kml");
+      var kml = new GGeoXml("http://www.cems.uwe.ac.uk/~c2-tizard/dsa/markers.kml");
       map.addOverlay(kml);
 
 
@@ -45,11 +45,6 @@ $city2 = $config['city2'];
     else {
       alert("Sorry, the Google Maps API is not compatible with this browser");
     }
-
-    // This Javascript is based on code provided by the
-    // Community Church Javascript Team
-    // http://www.bisphamchurch.org.uk/   
-    // http://econym.org.uk/gmap/
 
     //]]>
     </script>
