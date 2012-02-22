@@ -3,6 +3,7 @@
 * Copyright 2011, Brotherhood of the web.
 * 6/02/2012
 */
+
 html {
 	overflow-x:hidden;
 }
@@ -116,6 +117,16 @@ a:active {
 
 footer {
 	position:relative;
+}
+
+.summary {
+	float:left;
+	padding:8px 0 0 5px;
+}
+
+
+.weatherpicture {
+	float:left;
 }
 
 .lastfm li {
