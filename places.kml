@@ -45,10 +45,10 @@
   </Placemark>
 
   <Placemark>
-    <name>San Diego Airport</name>
-    <description>Some stuff to put in the first info window</description>
+    <name>Petco Park</name>
+    <description>Petco Park is an open-air ballpark in downtown San Diego. It opened in 2004, replacing Qualcomm Stadium as the home park of Major League Baseball's San Diego Padres. </description>
     <Point>
-      <coordinates>-117.197342,32.732419</coordinates>
+      <coordinates>-117.157066,32.707135</coordinates>
     </Point>
   </Placemark>
 
@@ -56,15 +56,15 @@
     <name>San Diego Zoo</name>
     <description>Some stuff to put in the first info window</description>
     <Point>
-      <coordinates>32.736245,-117.15168</coordinates>
+      <coordinates>-117.15168,32.736245</coordinates>
     </Point>
   </Placemark>
 
   <Placemark>
-    <name>San Diego Hospital</name>
-    <description>Some stuff to put in the first info window</description>
+    <name>Lockheed SR-71 Blackbird</name>
+    <description>The Lockheed SR-71 "Blackbird" was an advanced, long-range, Mach 3+ strategic reconnaissance aircraft, currently displayed outside the San Diego Air museum.</description>
     <Point>
-      <coordinates>32.754293,-117.165928</coordinates>
+      <coordinates>-117.154019,32.726787</coordinates>
     </Point>
   </Placemark>
 
@@ -72,7 +72,7 @@
     <name>Manchester Grand Hyatt</name>
     <description>Some stuff to put in the first info window</description>
     <Point>
-      <coordinates>32.709528,-117.169104</coordinates>
+      <coordinates>-117.169104,32.709528</coordinates>
     </Point>
   </Placemark>
 
@@ -80,7 +80,7 @@
     <name>The Maritime Museum of San Diego</name>
     <description>Some stuff to put in the first info window</description>
     <Point>
-      <coordinates>32.720766,-117.173535</coordinates>
+      <coordinates>-117.173535,32.720766</coordinates>
     </Point>
   </Placemark>
 

@@ -16,28 +16,22 @@ $city2 = $config['city2'];
   <body onunload="GUnload()">
 
 
-    <div id="map" style="width: 768px; height: 512px"></div>
-      <form action="#">
-        <input type="button" value="hide" onclick="map.removeOverlay(kml)" />
-        <input type="button" value="show" onclick="map.addOverlay(kml)" />
-      </form>
-    <script type="text/javascript">
+    <div id="cityMap1" style="width: 768px; height: 512px"></div>
+	<div id="cityMap2" style="width: 768px; height: 512px"></div>
+   <script type="text/javascript">
     //<![CDATA[
     
     if (GBrowserIsCompatible()) { 
 
+      var cityMap1 = new GMap2(document.getElementById("cityMap1"));
+      cityMap1.addControl(new GLargeMapControl());
+      cityMap1.addControl(new GMapTypeControl());
+      cityMap1.setCenter(new GLatLng(<?php echo $city1['lat'] . "," . $city1['lng']; ?>), 13);
 
- 
-      var map = new GMap2(document.getElementById("map"));
-      map.addControl(new GLargeMapControl());
-      map.addControl(new GMapTypeControl());
-      map.setCenter(new GLatLng(<?php echo $city1['lat'] . "," . $city1['lng']; ?>), 12);
-
-      // ==== Create a KML Overlay ====
+      // Create the KML Overlay
     
-      var kml = new GGeoXml("http://www.cems.uwe.ac.uk/~c2-tizard/dsa/places.kml");
-      map.addOverlay(kml);
-
+      var cityOverlay1 = new GGeoXml("http://www.charlietizard.com/places.kml");
+      cityMap1.addOverlay(cityOverlay1);
 
     }
     
@@ -48,6 +42,35 @@ $city2 = $config['city2'];
 
     //]]>
     </script>
+	
+	<script type="text/javascript">
+    //<![CDATA[
+    
+    if (GBrowserIsCompatible()) { 
+
+      var cityMap2 = new GMap2(document.getElementById("cityMap2"));
+      cityMap2.addControl(new GLargeMapControl());
+      cityMap2.addControl(new GMapTypeControl());
+      cityMap2.setCenter(new GLatLng(<?php echo $city2['lat'] . "," . $city2['lng']; ?>), 13);
+
+      // Create the KML Overlay
+    
+      var cityOverlay2 = new GGeoXml("http://www.charlietizard.com/places.kml");
+      cityMap2.addOverlay(cityOverlay2);
+
+    }
+    
+    // display a warning if the browser was not compatible
+    else {
+      alert("Sorry, the Google Maps API is not compatible with this browser");
+    }
+
+    //]]>
+    </script>
+	
+
+
+	
   </body>
 
 </html>
