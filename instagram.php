@@ -20,17 +20,13 @@ function instagramGetLatestPhotos($lat,$lng) {
 	$i = 0;
 
 	foreach ($response->data as $entry) {
-		if ($i < 5) {
-			$html .= "<img src=\"" . $entry->images->standard_resolution->url . "\" alt=\"" . $entry->caption->text . "\"/>";
+		if ($i < 4) {
+			$html .= "<a href=\"" . $entry->images->standard_resolution->url . "\"><img src=\"" . $entry->images->thumbnail->url . "\" alt=\"" . $entry->caption->text . "\"/></a>";
 		}
 		$i++;
 	}
 	
 	return $html;
 }
-echo "<pre>";
-
-print_r(instagramGetLatestPhotos(32.7153292,-117.1572551));
-
 
 ?>

@@ -1,6 +1,6 @@
 <?php
 include_once("commonlib.php");
-//include_once("instagram.php");
+include_once("instagram.php");
 include_once("lastfm.php");
 //include_once("maps.php");
 include_once("news.php");
@@ -112,7 +112,9 @@ $country2 = $config['city2']['country'];
 			<section>
 			<!-- Instagram - Mark Smith -->
 			<h4>Instagram</h4>
-			<p>picture of a steak</p>
+			
+			<?php echo instagramGetLatestPhotos($config['city1']['lat'],$config['city1']['lng']); ?>
+			
 			<!-- End Instagram -->
 			</section>
 			
@@ -173,7 +175,9 @@ $country2 = $config['city2']['country'];
 			<section>
 			<!-- Instagram - Mark Smith -->
 			<h4>Instagram</h4>
-			<p>picture of irnbru</p>
+
+			<?php echo instagramGetLatestPhotos($config['city2']['lat'],$config['city2']['lng']); ?>
+
 			<!-- End Instagram -->
 			</section>
 			
