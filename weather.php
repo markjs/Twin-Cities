@@ -36,11 +36,12 @@ function weatherGetFutureWeather($cityName,$daysFromNow) {
 	$conditions = $response->weather->forecast_conditions[$daysFromNow];
 	
 	$summary = $conditions->condition['data'];
+	$day = $conditions->day_of_week['data'];
 	$temp_low = farenheitToCelcius($conditions->low['data']);
 	$temp_high = farenheitToCelcius($conditions->high['data']);
 	$imgUrl = "http://google.com/" . $conditions->icon['data'];
 	
-	$html = "<img src=\"$imgUrl\" alt=\"$summary\"/><p>$summary</p><p>$temp_low</p><p>$temp_high</p>";
+	$html = "<p>$day</p><img src=\"$imgUrl\" alt=\"$summary\"/><p>$summary</p><p>$temp_low</p><p>$temp_high</p>";
 		
 	return $html;
 }

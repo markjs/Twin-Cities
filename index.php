@@ -76,6 +76,12 @@ $country2 = $config['city2']['country'];
 			<!-- Weather - Mark Smith -->		
 			<h4>Weather</h4>
 			<?php echo weatherGetCurrentWeather($city2); ?>
+			<h5>Forecast</h5>
+			<ul>
+				<?php for ($i=0; $i < 4; $i++) { 
+					echo "<li>" . weatherGetFutureWeather($city2,$i) . "</li>";
+				} ?>
+			</ul>
 			<!-- End Weather -->	
 			</section>
 			
@@ -139,6 +145,12 @@ $country2 = $config['city2']['country'];
 			<!-- Weather - Mark Smith -->
 			<h4>Weather</h4>
 			<?php echo weatherGetCurrentWeather($city1); ?>
+			<h5>Forecast</h5>
+			<ul>
+				<?php for ($i=0; $i < 4; $i++) { 
+					echo "<li>" . weatherGetFutureWeather($city1,$i) . "</li>";
+				} ?>
+			</ul>
 			<!-- End Weather -->
 			</section>
 			
