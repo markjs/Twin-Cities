@@ -119,15 +119,47 @@ footer {
 	position:relative;
 }
 
+
+
+.tweet a {
+	font-weight:bold;
+}
+
+.tweet a:visited  {
+	font-weight:bold;
+}
+
+.tweet a:hover {
+	font-weight:bold;
+}
+
+.tweet a:active {
+	font-weight:bold;
+}
+
 .summary {
 	float:left;
 	padding:8px 0 0 5px;
 }
+
+.summarysmall {
+	float:left;
+	padding:3px 0 0 5px;
+	
+}
+
+
 .clear {
 	clear:both;
 }
 .weatherpicture {
 	float:left;
+}
+
+.weatherpicturesmall {
+	float:left;
+	width:25px;
+	height:25px;
 }
 
 .lastfm li {

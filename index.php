@@ -79,9 +79,9 @@ $country2 = $config['city2']['country'];
 			
 			<section>
 			<!-- Weather - Mark Smith -->		
-			<h4>Weather</h4>
+			<h4>Current Weather</h4>
 			<?php echo weatherGetCurrentWeather($city2); ?>
-			<h5>Forecast</h5>
+			<h4>Weather Forecast</h4>
 			<ul>
 				<?php for ($i=0; $i < 4; $i++) { 
 					echo "<li>" . weatherGetFutureWeather($city2,$i) . "</li>";
@@ -92,7 +92,7 @@ $country2 = $config['city2']['country'];
 			
 			<section>
 			<!-- News - Alex Jegtnes -->
-			<h4>News</h4>
+			<h4>Latest News</h4>
 			<ul>
 			<?php
 				foreach(acquireNews($city2) as $news) {
@@ -105,25 +105,26 @@ $country2 = $config['city2']['country'];
 			
 			<section>
 			<!-- Google Maps - Charlie Tizard -->
-			<h4>Map</h4>
+			<h4>Street Map</h4>
 			<?php echo renderMap($config['city2']['lat'],$config['city2']['lng']); ?>
 			<!-- End Google Maps -->
 			</section>
 			
 			<section>
 			<!-- Twitter - Charlie Tizard -->
-			<h4>Twitter</h4>
+			<h4>Tweets from Town</h4>
 			<?php
 			foreach(twitterGetTweets($config['city2']['lat'],$config['city2']['lng']) as $c2t) {
-				echo "<p><a href='" . $c2t['authorurl'] . "'>" . $c2t['authorname'] . ":</a> " . $c2t['content'] . "</p>";
+				echo "<p class=\"tweet\"><a href='" . $c2t['authorurl'] . "'>" . $c2t['authorname'] . ":</a> " . $c2t['content'] . "</p>";
 			}
 			?>
 			<!-- End Twitter -->
+			<div class=\"clear\"></div>
 			</section>
 			
 			<section>
 			<!-- Instagram - Mark Smith -->
-			<h4>Instagram</h4>
+			<h4>Local Instagram Posts</h4>
 			
 			<?php echo instagramGetLatestPhotos($config['city2']['lat'],$config['city2']['lng']); ?>
 			
@@ -132,7 +133,7 @@ $country2 = $config['city2']['country'];
 			
 			<section>
 			<!-- Last.fm - Alex Jegtnes -->
-			<h4>Last.fm</h4>
+			<h4>Top Last.fm Artists</h4>
 			<ul class="lastfm"><?php 
 			foreach(lastfmGetTopArtists(10, $city2, $country2) as $lfm) {
 				echo("<li><a href=\"" . $lfm['url'] . "\">" . "<img alt=\"A picture of " . $lfm['name'] . "\" src=\"" . $lfm['image'] . "\" />" . $lfm['name'] . "</a></li>");
@@ -148,9 +149,9 @@ $country2 = $config['city2']['country'];
 			
 			<section>
 			<!-- Weather - Mark Smith -->
-			<h4>Weather</h4>
+			<h4>Current Weather</h4>
 			<?php echo weatherGetCurrentWeather($city1); ?>
-			<h5>Forecast</h5>
+			<h4>Weather Forecast</h4>
 			<ul>
 				<?php for ($i=0; $i < 4; $i++) { 
 					echo "<li>" . weatherGetFutureWeather($city1,$i) . "</li>";
@@ -161,7 +162,7 @@ $country2 = $config['city2']['country'];
 			
 			<section>
 			<!-- News - Alex Jegtnes -->
-			<h4>News</h4>
+			<h4>Latest News</h4>
 			<ul>
 			<?php
 				foreach(acquireNews($city1) as $news) {
@@ -174,17 +175,17 @@ $country2 = $config['city2']['country'];
 			
 			<section>
 			<!-- Google Maps - Charlie Tizard -->
-			<h4>Map</h4>
+			<h4>Street Map</h4>
 			<?php echo renderMap($config['city1']['lat'],$config['city1']['lng']); ?>
 			<!-- End Google Maps -->
 			</section>
 			
 			<section>
 			<!-- Twitter - Charlie Tizard -->
-			<h4>Twitter</h4>
+			<h4>Tweets from Town</h4>
 			<?php
 			foreach(twitterGetTweets($config['city1']['lat'],$config['city1']['lng']) as $c2t) {
-				echo "<p><a href='" . $c2t['authorurl'] . "'>" . $c2t['authorname'] . ":</a> " . $c2t['content'] . "</p>";
+				echo "<p class=\"tweet\"><a href='" . $c2t['authorurl'] . "'>" . $c2t['authorname'] . ":</a> " . $c2t['content'] . "</p>";
 			}
 			?>
 			<!-- End Twitter -->
@@ -192,7 +193,7 @@ $country2 = $config['city2']['country'];
 			
 			<section>
 			<!-- Instagram - Mark Smith -->
-			<h4>Instagram</h4>
+			<h4>Local Instagram Posts</h4>
 
 			<?php echo instagramGetLatestPhotos($config['city1']['lat'],$config['city1']['lng']); ?>
 
@@ -201,7 +202,7 @@ $country2 = $config['city2']['country'];
 			
 			<section>
 			<!-- Last.fm - Alex Jegtnes -->
-			<h4>Last.fm</h4>
+			<h4>Top Last.fm Artists</h4>
 			<ul class="lastfm"><?php 
 			foreach(lastfmGetTopArtists(10, $city1, $country1) as $lfm) {
 				echo("<li><a href=\"" . $lfm['url'] . "\">" . "<img alt=\"A picture of " . $lfm['name'] . "\" src=\"" . $lfm['image'] . "\" />" . $lfm['name'] . "</a></li>");
