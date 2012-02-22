@@ -13,6 +13,7 @@
                             <place lat="55.949581" lng="-3.1914" html="Some stuff to display in theFirst Info Window" label="St Giles Cathedral"/>
                             <place lat="55.950131" lng="-3.180531" html="Some stuff to display in theFirst Info Window" label="Museum of Edinburgh"/>
                         </poi>
+			<woeid>19344</woeid>
 		</city1>
 		<city2>
 			<name>San Diego</name>
@@ -27,6 +28,7 @@
 Manchester Grand Hyatt"/>
                             <place lat="32.720766" lng="-117.173535" html="Some stuff to display in theFirst Info Window" label="Museum of Edinburgh"/>
                         </poi>
+			<woeid>2487889</woeid>
 		</city2>
 	</shared>
 	<news>
@@ -49,4 +51,7 @@ Manchester Grand Hyatt"/>
 		<clientSecret>4ebe97f740a04b34ab0633cc88ce112d</clientSecret>
 		<baseUri>https://api.instagram.com/v1/media/search?</baseUri>
 	</instagram>
+	<weather>
+		
+	</weather>
 </config>
