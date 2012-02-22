@@ -6,44 +6,50 @@ $city1 = $config['city1'];
 $city2 = $config['city2'];
 ?>
 
-<!DOCTYPE html>
+<!DOCTYPE html>     
 <html>
   <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <style type="text/css">
-      html { height: 100% }
-      body { height: 100%; margin: 0; padding: 0 }
-      #map_canvas { height: 100% }
-    </style>
-    <script type="text/javascript"
-      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCmsUrnImKjRK8QTKOhXvSWW-wPXsvIvxU&sensor=false">
-    </script>
-    
-    <script type="text/javascript">
-      function initialize() {
-        var myOptions = {
-          center: new google.maps.LatLng(<?php echo $city1['lat'] . "," . $city1['lng'] ?>),
-          zoom: 12,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        var map = new google.maps.Map(document.getElementById("map_canvas"),
-            myOptions)
-            
-        var myOptions = {
-          center: new google.maps.LatLng(<?php echo $city2['lat'] . "," . $city2['lng'] ?>),
-          zoom: 12,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        var map = new google.maps.Map(document.getElementById("map_canvas2"),
-            myOptions)
-      }     
-    </script>
-   
-      
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>Google Maps</title>
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=AIzaSyCmsUrnImKjRK8QTKOhXvSWW-wPXsvIvxU" type="text/javascript"></script>
   </head>
-  <body onload="initialize()">
-    <div id="map_canvas" style="width:500px; height:500px"></div>
+  <body onunload="GUnload()">
+
+
+    <div id="map" style="width: 768px; height: 512px"></div>
+
+    <script type="text/javascript">
+    //<![CDATA[
     
-   <div id="map_canvas2" style="width:500px; height:500px"></div>
+    if (GBrowserIsCompatible()) { 
+
+
+ 
+      var map = new GMap2(document.getElementById("map"));
+      map.addControl(new GLargeMapControl());
+      map.addControl(new GMapTypeControl());
+      map.setCenter(new GLatLng(53.763325,-2.579041), 9);
+
+      // ==== Create a KML Overlay ====
+    
+      var kml = new GGeoXml("http://econym.org.uk/gmap/lancashire.kml");
+      map.addOverlay(kml);
+
+
+    }
+    
+    // display a warning if the browser was not compatible
+    else {
+      alert("Sorry, the Google Maps API is not compatible with this browser");
+    }
+
+    // This Javascript is based on code provided by the
+    // Community Church Javascript Team
+    // http://www.bisphamchurch.org.uk/   
+    // http://econym.org.uk/gmap/
+
+    //]]>
+    </script>
   </body>
+
 </html>
