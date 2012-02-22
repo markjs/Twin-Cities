@@ -1,0 +1,23 @@
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+	<Document>
+		<name>City1</name>
+		<atom:author>
+			<atom:name>Charlie Tizard</atom:name>
+		</atom:author>
+		<atom:link href="http://www.uwe.ac.uk" />
+		<Placemark>
+			<name>castl</name>
+			<description><![CDATA[castleldfgdfh]]></description>
+			<Point>
+				<coordinates>-3.200197,55.948683</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>sdfsdf</name>
+			<description><![CDATA[sdfsdg]]></description>
+			<Point>
+				<coordinates>-3.188267,55.953252</coordinates>
+			</Point>
+		</Placemark>
+	</Document>
+</kml>

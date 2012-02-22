@@ -17,7 +17,10 @@ $city2 = $config['city2'];
 
 
     <div id="map" style="width: 768px; height: 512px"></div>
-
+      <form action="#">
+        <input type="button" value="hide" onclick="map.removeOverlay(kml)" />
+        <input type="button" value="show" onclick="map.addOverlay(kml)" />
+      </form>
     <script type="text/javascript">
     //<![CDATA[
     
@@ -28,11 +31,11 @@ $city2 = $config['city2'];
       var map = new GMap2(document.getElementById("map"));
       map.addControl(new GLargeMapControl());
       map.addControl(new GMapTypeControl());
-      map.setCenter(new GLatLng(53.763325,-2.579041), 9);
+      map.setCenter(new GLatLng(<?php echo $city1['lat'] . "," . $city1['lng']; ?>), 12);
 
       // ==== Create a KML Overlay ====
     
-      var kml = new GGeoXml("http://econym.org.uk/gmap/lancashire.kml");
+      var kml = new GGeoXml("http://www.cems.uwe.ac.uk/~c2-tizard/dsa/places.kml");
       map.addOverlay(kml);
 
 
