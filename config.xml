@@ -50,6 +50,6 @@ Manchester Grand Hyatt"/>
 		<baseUri>https://api.instagram.com/v1/media/search?</baseUri>
 	</instagram>
 	<weather>
-		<baseUri>http://weather.yahooapis.com/forecastrss?</baseUri>
+		<baseUri>http://www.google.com/ig/api?weather=</baseUri>
 	</weather>
 </config>
