@@ -47,6 +47,7 @@ margin-top:75px;
 #ed  h1,h2,h3,h4,h5, #sd  h1,h2,h3,h4,h5  {
 	color:#444;
 	font-family: 'PTSansBold';
+	
 }
 
 #sd > h3, #ed > h3{
@@ -56,6 +57,7 @@ margin-top:75px;
 
 #sd > h4, #ed > h4 {
 	text-align:center;
+	
 }
 
 p#weather {
@@ -179,6 +181,7 @@ footer::before , footer::after {
 	top: 0;
 	bottom: 0;
 	width: 9999px;   /* some huge width */
+	
 }
 
 footer::before {
