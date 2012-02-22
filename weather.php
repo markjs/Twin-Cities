@@ -11,10 +11,16 @@ function weatherGetCurrentWeather($cityName) {
 	$request = $weather['baseUri'] . urlencode($cityName);
 	
 	$response = simplexml_load_string(acquire_file($request));
+	
+	$summary = $response->weather->current_conditions->condition['data'];
+	$temp = $response->weather->current_conditions->temp_c['data'];
+	$imgUrl = "http://google.com/" . $response->weather->current_conditions->icon['data'];
+	
+	$html = "<img src=\"$imgUrl\" alt=\"$summary\"/><p>$summary</p><p>$temp</p>";
 		
-	return $response->weather->current_conditions->condition['data'];
+	return $html;
 }
 
-echo weatherGetCurrentWeather("edinburgh");
+echo weatherGetCurrentWeather("san diego");
 
 ?>
