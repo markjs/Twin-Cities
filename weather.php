@@ -41,7 +41,7 @@ function weatherGetFutureWeather($cityName,$daysFromNow) {
 	$temp_high = farenheitToCelcius($conditions->high['data']);
 	$imgUrl = "http://google.com/" . $conditions->icon['data'];
 	
-	$html = "<h5 class=\"day\">$day</h5><img src=\"$imgUrl\" alt=\"$summary\" class=\"weatherpicturesmall\"/><p class=\"summarysmall\">Outlook: $summary, Low: $temp_low&#8451;, High: $temp_high&#8451;</p> <pclass=\"summarysmall\"></p></br>";
+	$html = "<h5 class=\"day\">$day</h5><img src=\"$imgUrl\" alt=\"$summary\" class=\"weatherpicturesmall\"/><p class=\"summarysmall\">Outlook: $summary, Low: $temp_low&#8451;, High: $temp_high&#8451;</p>";
 		
 	return $html;
 }
