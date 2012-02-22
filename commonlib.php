@@ -27,7 +27,7 @@ function acquire_file($uri) {
     }
     
     else{
-		 file_get_contents($uri);
+		 return file_get_contents($uri);
     }
 };
 
