@@ -115,7 +115,7 @@ $country2 = $config['city2']['country'];
 			<h4>Tweets from Town</h4>
 			<?php
 			foreach(twitterGetTweets($config['city2']['lat'],$config['city2']['lng']) as $c2t) {
-				echo "<p class=\"tweet\"><a href='" . $c2t['authorurl'] . "'>" . $c2t['authorname'] . ":</a> " . $c2t['content'] . "</p>";
+				echo "<p class=\"tweet\"><a href='" . $c2t['authorUrl'] . "'>" . $c2t['authorName'] . ":</a> " . $c2t['content'] . "</p>";
 			}
 			?>
 			<!-- End Twitter -->
@@ -185,7 +185,7 @@ $country2 = $config['city2']['country'];
 			<h4>Tweets from Town</h4>
 			<?php
 			foreach(twitterGetTweets($config['city1']['lat'],$config['city1']['lng']) as $c2t) {
-				echo "<p class=\"tweet\"><a href='" . $c2t['authorurl'] . "'>" . $c2t['authorname'] . ":</a> " . $c2t['content'] . "</p>";
+				echo "<p class=\"tweet\"><a href='" . $c2t['authorUrl'] . "'>" . $c2t['authorName'] . ":</a> " . $c2t['content'] . "</p>";
 			}
 			?>
 			<!-- End Twitter -->
