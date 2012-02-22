@@ -15,18 +15,23 @@ function instagramGetLatestPhotos($lat,$lng) {
 	
 	$response = json_decode(acquire_file($request));
 	
+	// echo "<pre>";
+	// 	print_r($response);
+	
 	$html = "";
 
 	$i = 0;
 
 	foreach ($response->data as $entry) {
 		if ($i < 4) {
-			$html .= "<a href=\"" . $entry->images->standard_resolution->url . "\"><img src=\"" . $entry->images->thumbnail->url . "\" alt=\"" . $entry->caption->text . "\"/></a>";
+			$html .= "<a href=\"" . $entry->link . "\"><img src=\"" . $entry->images->thumbnail->url . "\" alt=\"" . $entry->caption->text . "\"/></a>";
 		}
 		$i++;
 	}
 	
 	return $html;
 }
+
+// instagramGetLatestPhotos(55.953237,-3.188438);
 
 ?>

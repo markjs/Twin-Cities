@@ -113,7 +113,7 @@ $country2 = $config['city2']['country'];
 			<!-- Instagram - Mark Smith -->
 			<h4>Instagram</h4>
 			
-			<?php echo instagramGetLatestPhotos($config['city1']['lat'],$config['city1']['lng']); ?>
+			<?php echo instagramGetLatestPhotos($config['city2']['lat'],$config['city2']['lng']); ?>
 			
 			<!-- End Instagram -->
 			</section>
@@ -176,7 +176,7 @@ $country2 = $config['city2']['country'];
 			<!-- Instagram - Mark Smith -->
 			<h4>Instagram</h4>
 
-			<?php echo instagramGetLatestPhotos($config['city2']['lat'],$config['city2']['lng']); ?>
+			<?php echo instagramGetLatestPhotos($config['city1']['lat'],$config['city1']['lng']); ?>
 
 			<!-- End Instagram -->
 			</section>
