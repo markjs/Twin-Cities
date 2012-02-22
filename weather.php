@@ -49,7 +49,4 @@ function farenheitToCelcius($temp) {
 	return round(($temp-32)*(5/9));
 }
 
-
-echo weatherGetFutureWeather("san diego",0);
-
 ?>

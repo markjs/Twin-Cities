@@ -5,6 +5,7 @@ include_once("lastfm.php");
 //include_once("maps.php");
 include_once("news.php");
 include_once("twitter.php");
+include_once("weather.php");
 $config = loadConfig();
 $city1 = $config['city1']['name'];
 $country1 = $config['city1']['country'];
@@ -74,7 +75,7 @@ $country2 = $config['city2']['country'];
 			<section>
 			<!-- Weather - Mark Smith -->		
 			<h4>Weather</h4>
-			<p id="weather">24, windy.</p>
+			<?php echo weatherGetCurrentWeather($city2); ?>
 			<!-- End Weather -->	
 			</section>
 			
@@ -137,7 +138,7 @@ $country2 = $config['city2']['country'];
 			<section>
 			<!-- Weather - Mark Smith -->
 			<h4>Weather</h4>
-			<p id="weather">24, windy.</p>
+			<?php echo weatherGetCurrentWeather($city1); ?>
 			<!-- End Weather -->
 			</section>
 			
