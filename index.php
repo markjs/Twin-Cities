@@ -3,6 +3,7 @@ include_once("commonlib.php");
 include_once("instagram.php");
 include_once("lastfm.php");
 //include_once("maps.php");
+include_once("maps2.php");
 include_once("news.php");
 include_once("twitter.php");
 include_once("weather.php");
@@ -49,7 +50,11 @@ $country2 = $config['city2']['country'];
 	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-
+	
+	<!-- Maps Script
+	================================================== -->
+	<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=AIzaSyCmsUrnImKjRK8QTKOhXvSWW-wPXsvIvxU" type="text/javascript"></script>
+	
 </head>
 <body>
 
@@ -64,7 +69,7 @@ $country2 = $config['city2']['country'];
 	
 		<header class="sixteen columns nomargin">
 			<h1 class="remove-bottom" id="title">Twin Cities</h1>
-			<h5 id="subtitle">San Diego & Edinburgh</h5>
+			<h5 id="subtitle">San Diego &amp; Edinburgh</h5>
 			<div id="skyline"></div>
 		</header>
 		
@@ -101,7 +106,7 @@ $country2 = $config['city2']['country'];
 			<section>
 			<!-- Google Maps - Charlie Tizard -->
 			<h4>Map</h4>
-			<iframe frameborder=0 marginwidth=0 marginheight=0 border=0 src="http://www.google.com/uds/modules/elements/mapselement/iframe.html?maptype=roadmap&latlng=32.715329%2C-117.157255&mlatlng=32.715329%2C-117.157255&maddress1=San%20Diego%2C%20CA&zoom=12&mtitle=San%20Diego%2C%20CA&element=true" scrolling="no" allowtransparency="true"></iframe>
+			<?php echo renderMap($config['city2']['lat'],$config['city2']['lng']); ?>
 			<!-- End Google Maps -->
 			</section>
 			
@@ -170,7 +175,7 @@ $country2 = $config['city2']['country'];
 			<section>
 			<!-- Google Maps - Charlie Tizard -->
 			<h4>Map</h4>
-			<iframe frameborder=0 marginwidth=0 marginheight=0 border=0 src="http://www.google.com/uds/modules/elements/mapselement/iframe.html?maptype=roadmap&latlng=55.953252%2C-3.188267&mlatlng=55.953252%2C-3.188267&maddress1=Edinburgh%2C%20Midlothian&maddress2=UK&zoom=12&mtitle=Edinburgh%2C%20Midlothian&element=true" scrolling="no" allowtransparency="true"></iframe>
+			<?php echo renderMap($config['city1']['lat'],$config['city1']['lng']); ?>
 			<!-- End Google Maps -->
 			</section>
 			

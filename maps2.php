@@ -5,18 +5,6 @@ $config = loadConfig("config.xml");
 $city1 = $config['city1'];
 $city2 = $config['city2'];
 
-?>
-
-<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=AIzaSyCmsUrnImKjRK8QTKOhXvSWW-wPXsvIvxU" type="text/javascript"></script>
-
-<style>
-	body > div {
-		width:500px;
-		height:500px;
-	}
-</style>
-
-<?php
 
 function renderMap($lat,$lng) {
 	
