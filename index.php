@@ -121,11 +121,11 @@ $country2 = $config['city2']['country'];
 			<section>
 			<!-- Last.fm - Alex Jegtnes -->
 			<h4>Last.fm</h4>
-			<p><?php 
+			<ul class="lastfm"><?php 
 			foreach(lastfmGetTopArtists(10, $city2, $country2) as $lfm) {
-				echo("<li><img src=\"" . $lfm['image'] . "\" />" . $lfm['name'] . "</li>");
+				echo("<li><a href=\"" . $lfm['url'] . "\">" . "<img alt=\"A picture of " . $lfm['name'] . "\" src=\"" . $lfm['image'] . "\" />" . $lfm['name'] . "</a></li>");
 			}
-			?></p>
+			?></ul>
 			<!-- End Last.fm -->
 			</section>
 		</div>
@@ -184,11 +184,11 @@ $country2 = $config['city2']['country'];
 			<section>
 			<!-- Last.fm - Alex Jegtnes -->
 			<h4>Last.fm</h4>
-			<p><?php 
-				foreach(lastfmGetTopArtists(10, $city1, $country1) as $lfm) {
-					echo("<li><img src=\"" . $lfm['image'] . "\" />" . $lfm['name'] . "</li>");
-				}
-			?></p>
+			<ul class="lastfm"><?php 
+			foreach(lastfmGetTopArtists(10, $city1, $country1) as $lfm) {
+				echo("<li><a href=\"" . $lfm['url'] . "\">" . "<img alt=\"A picture of " . $lfm['name'] . "\" src=\"" . $lfm['image'] . "\" />" . $lfm['name'] . "</a></li>");
+			}
+			?></ul>
 			<!-- End Last.fm -->
 			</section>
 			

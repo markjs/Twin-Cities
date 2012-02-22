@@ -9,7 +9,7 @@ include_once("commonlib.php");
  * @param type $lfmCountry The country the city is in
  * @author Alexander Jegtnes
  * @version 1.0
- * @return array Returns a simple, indexed array with the top artists
+ * @return array Returns an associative array with the top artists, the artist picture and the artist URL
  */
 
 function lastfmGetTopArtists($num, $lfmMetro, $lfmCountry) {
@@ -31,7 +31,7 @@ function lastfmGetTopArtists($num, $lfmMetro, $lfmCountry) {
 		if ($count <= $num) {
 			//the casting is needed because SimpleXML objects are complex objects.
 			//http://www.php.net/manual/en/ref.simplexml.php#91057
-			$ret[] = array((string) 'name' => $artistName->name[0], 'image' => $artistName->image[2]);
+			$ret[] = array((string) 'name' => $artistName->name[0], 'image' => $artistName->image[2], 'url' => $artistName->url[0]);
 		}
 	}
 	return($ret);

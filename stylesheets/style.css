@@ -118,6 +118,17 @@ footer {
 	position:relative;
 }
 
+.lastfm li {
+	display: inline-block;
+	width: auto;
+	padding: .25em;
+}
+
+.lastfm img {
+	display: block;
+	margin: 0 auto;
+}
+
 footer::before , footer::after {
 	content: "";
 	position: absolute;
