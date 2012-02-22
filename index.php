@@ -83,9 +83,9 @@ $country2 = $config['city2']['country'];
 			<h4>News</h4>
 			<ul>
 			<?php
-				/*foreach(acquireNews($city2) as $news) {
+				foreach(acquireNews($city2) as $news) {
 					echo "<li><a href=\"" . $news['url'] . "\">" . $news['title'] . "</a></li>";
-				}*/
+				}
 			?>
 			<!-- End News -->
 			</ul>
@@ -146,9 +146,9 @@ $country2 = $config['city2']['country'];
 			<h4>News</h4>
 			<ul>
 			<?php
-				/*foreach(acquireNews($city1) as $news) {
+				foreach(acquireNews($city1) as $news) {
 					echo "<li><a href=\"" . $news['url'] . "\">" . $news['title'] . "</a></li>";
-				}*/
+				}
 			?>
 			</ul>
 			<!-- End News -->
