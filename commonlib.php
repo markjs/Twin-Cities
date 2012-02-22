@@ -61,11 +61,12 @@ function loadConfig() {
 	$instagramClientId =        $configXml->instagram->clientId;
 	$instagramClientSecret =    $configXml->instagram->clientSecret;
 	
-	$config['city1'] = array('name'=>$city1, 'country'=>$city1Country, 'lat'=>$city1Lat, 'lng'=>$city1Lng,'woeid'=>$config->city1->woeid);
-	$config['city2'] = array('name'=>$city2, 'country'=>$city2Country, 'lat'=>$city2Lat, 'lng'=>$city2Lng,'woeid'=>$config->city2->woeid);
+	$config['city1'] = array('name'=>$city1, 'country'=>$city1Country, 'lat'=>$city1Lat, 'lng'=>$city1Lng,'woeid'=>$configXml->city1->woeid);
+	$config['city2'] = array('name'=>$city2, 'country'=>$city2Country, 'lat'=>$city2Lat, 'lng'=>$city2Lng,'woeid'=>$configXml->city2->woeid);
 	$config['news'] = array('baseUri'=>$newsBaseUri, 'orderBy'=>$newsOrderBy, 'numberOfResults'=>$newsResultNum, 'dates'=>$newsDates);
 	$config['lastfm'] = array('method'=>$lastfmMethod, 'apiKey'=>$lastfmApiKey, 'numberOfResults'=>$lastfmResults);
 	$config['instagram'] = array('clientId'=>$instagramClientId, 'clientSecret'=>$instagramClientSecret, 'baseUri'=>$configXml->instagram->baseUri);
+	$config['weather'] = array('baseUri'=>$configXml->weather->baseUri);
 	
 	return $config;
 
