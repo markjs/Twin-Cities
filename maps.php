@@ -35,7 +35,7 @@ $city2 = $config['city2'];
 
       // ==== Create a KML Overlay ====
     
-      var kml = new GGeoXml("http://www.cems.uwe.ac.uk/~c2-tizard/dsa/markers.kml");
+      var kml = new GGeoXml("http://www.cems.uwe.ac.uk/~c2-tizard/dsa/places.kml");
       map.addOverlay(kml);
 
 
