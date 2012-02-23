@@ -178,13 +178,17 @@ footer {
 	margin: 0 auto;
 }
 
+.instagram a {
+	display: inline-block;
+	padding: 0.25em;
+}
+
 footer::before , footer::after {
 	content: "";
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	width: 9999px;   /* some huge width */
-	
+	width: 9999px;   /* some huge width */	
 }
 
 footer::before {

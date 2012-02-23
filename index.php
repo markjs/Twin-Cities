@@ -122,7 +122,7 @@ $country2 = $config['city2']['country'];
 			<!-- End Twitter -->
 			</section>
 			
-			<section>
+			<section class="instagram">
 			<!-- Instagram - Mark Smith -->
 			<h4>Local Instagram Posts</h4>
 
@@ -195,7 +195,7 @@ $country2 = $config['city2']['country'];
 			<div class=\"clear\"></div>
 			</section>
 			
-			<section>
+			<section class="instagram">
 			<!-- Instagram - Mark Smith -->
 			<h4>Local Instagram Posts</h4>
 			

@@ -23,7 +23,7 @@ function renderMap($lat,$lng) {
 	
 	     // Create the KML Overlay (hosted externally for Google to be able to tunnel in and retrieve the file)
 			
-	     var cityOverlay1 = new GGeoXml(\"http://www.charlietizard.com/places.kml\");
+	     var cityOverlay1 = new GGeoXml(\"http://www.charlietizard.com/uni/dsa/places.kml\");
 	     cityMap1.addOverlay(cityOverlay1);
 	
 	   }
