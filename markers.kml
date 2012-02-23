@@ -3,7 +3,6 @@
 <Document>
   <name>City1 and City2 POI</name>
   <description>Point of interest markers.</description>
-
   <Placemark>
     <name>Edinburgh Castle</name>
     <description>Edinburgh Castle is a fortress which dominates the skyline of the city of Edinburgh, Scotland, from its position atop the volcanic Castle Rock.</description>
@@ -11,7 +10,6 @@
       <coordinates>55.948683,-3.200197</coordinates>
     </Point>
   </Placemark>
-
   <Placemark>
     <name>The St. James Centre</name>
     <description>The St. James Centre is a shopping centre and unoccupied Scottish Government office building in Edinburgh, Scotland.</description>
@@ -19,7 +17,6 @@
       <coordinates>55.955093,-3.18861</coordinates>
     </Point>
   </Placemark>
-
   <Placemark>
     <name>Waverley railway station</name>
     <description>Waverley railway station is the main railway station in the Scottish capital Edinburgh. Covering an area of over 25 acres in the centre of the city.</description>
@@ -27,7 +24,6 @@
       <coordinates>55.952391,-3.188227</coordinates>
     </Point>
   </Placemark>
-
   <Placemark>
     <name>St Giles Cathedral</name>
     <description>Some stuff to put in the first info window</description>
@@ -35,7 +31,6 @@
       <coordinates>55.949581,-3.1914</coordinates>
     </Point>
   </Placemark>
-
   <Placemark>
     <name>Museum of Edinburgh</name>
     <description>Some stuff to put in the first info window</description>
@@ -43,7 +38,6 @@
       <coordinates>55.950131,-3.180531</coordinates>
     </Point>
   </Placemark>
-
   <Placemark>
     <name>San Diego Airport</name>
     <description>Some stuff to put in the first info window</description>
@@ -51,7 +45,6 @@
       <coordinates>32.732419,-117.197342</coordinates>
     </Point>
   </Placemark>
-
   <Placemark>
     <name>San Diego Zoo</name>
     <description>Some stuff to put in the first info window</description>
@@ -59,7 +52,6 @@
       <coordinates>32.736245,-117.15168</coordinates>
     </Point>
   </Placemark>
-
   <Placemark>
     <name>San Diego Hospital</name>
     <description>Some stuff to put in the first info window</description>
@@ -67,7 +59,6 @@
       <coordinates>32.754293,-117.165928</coordinates>
     </Point>
   </Placemark>
-
   <Placemark>
     <name>Manchester Grand Hyatt</name>
     <description>Some stuff to put in the first info window</description>
@@ -75,7 +66,6 @@
       <coordinates>32.709528,-117.169104</coordinates>
     </Point>
   </Placemark>
-
   <Placemark>
     <name>The Maritime Museum of San Diego</name>
     <description>Some stuff to put in the first info window</description>
@@ -83,6 +73,5 @@
       <coordinates>32.720766,-117.173535</coordinates>
     </Point>
   </Placemark>
-
 </Document>
 </kml>
