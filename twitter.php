@@ -12,10 +12,11 @@ $config = loadConfig();
 
 /* initialises my count and post variables */
 $count = 0;
-$post =""; 
+$post ="";
 
 /* fetches my xml query from twitter */
 $twitterFeed = simplexml_load_string(acquire_file("http://search.twitter.com/search.atom?oauth_consumer_key=4wXTXMcxJbbMIakpRYg&geocode=" . $lat . "," . $lng . ",10mi&lang=en&include_entities=true&result_type=recent+exclude:retweets+exclude:replies"));
+
 
 /* loops though returned xml and stores it in arrayception */
 	foreach($twitterFeed->entry as $tweet) { 
