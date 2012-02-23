@@ -36,40 +36,36 @@ function loadConfig() {
 	global $configFile;
 	if (file_exists($configFile)) {
 	$configXml = simplexml_load_file($configFile);
-	
-	// global $city1, $city2, $city1Country, $city2Country, $lastfmMethod, $lastfmApiKey, $lastfmResults, $newsBaseUri, $newsOrderBy, $newsResultNum, $newsDates;
 
-	$city1 =                    $configXml->shared->city1->name;
-	$city2 =                    $configXml->shared->city2->name;
-	$city1Country =             $configXml->shared->city1->country;
-	$city2Country =             $configXml->shared->city2->country;
-
-	$city1Lat =                 $configXml->shared->city1->lat;
-	$city1Lng =                 $configXml->shared->city1->long;
-	$city2Lat =                 $configXml->shared->city2->lat;
-	$city2Lng =                 $configXml->shared->city2->long;
+	// This pulls all the fields from the XML file and stores them in the config array, ready to be accessed by the other functions.
+	$config['city1'] = array(
+		'name'=>$configXml->shared->city1->name,
+		'country'=>$configXml->shared->city1->country,
+		'lat'=>$configXml->shared->city1->lat,
+		'lng'=>$configXml->shared->city1->long);
+	$config['city2'] = array(
+		'name'=>$configXml->shared->city2->name,
+		'country'=>$configXml->shared->city2->country,
+		'lat'=>$configXml->shared->city2->lat,
+		'lng'=>$configXml->shared->city2->long);
+	$config['news'] = array(
+		'baseUri'=>$configXml->news->baseUri,
+		'orderBy'=>$configXml->news->orderBy,
+		'numberOfResults'=>$configXml->news->resultNum,
+		'dates'=>$configXml->news->dates);
+	$config['lastfm'] = array(
+		'method'=>$onfigXml->lastfm->method,
+		'apiKey'=>$configXml->lastfm->apiKey,
+		'numberOfResults'=>$configXml->lastfm->results);
+	$config['instagram'] = array(
+		'clientId'=>$configXml->instagram->clientId,
+		'clientSecret'=>$configXml->instagram->clientSecret,
+		'baseUri'=>$configXml->instagram->baseUri);
+	$config['weather'] = array(
+		'baseUri'=>$configXml->weather->baseUri);
 	
-        $newsBaseUri =              $configXml->news->baseUri;
-        $newsOrderBy =              $configXml->news->orderBy;
-        $newsResultNum =            $configXml->news->resultNum;
-        $newsDates =                $configXml->news->dates;
-	
-	$lastfmMethod =             $configXml->lastfm->method;
-	$lastfmApiKey =             $configXml->lastfm->apiKey;
-	$lastfmResults =            $configXml->lastfm->results;
-	
-	$instagramClientId =        $configXml->instagram->clientId;
-	$instagramClientSecret =    $configXml->instagram->clientSecret;
-	
-	$config['city1'] = array('name'=>$city1, 'country'=>$city1Country, 'lat'=>$city1Lat, 'lng'=>$city1Lng);
-	$config['city2'] = array('name'=>$city2, 'country'=>$city2Country, 'lat'=>$city2Lat, 'lng'=>$city2Lng);
-	$config['news'] = array('baseUri'=>$newsBaseUri, 'orderBy'=>$newsOrderBy, 'numberOfResults'=>$newsResultNum, 'dates'=>$newsDates);
-	$config['lastfm'] = array('method'=>$lastfmMethod, 'apiKey'=>$lastfmApiKey, 'numberOfResults'=>$lastfmResults);
-	$config['instagram'] = array('clientId'=>$instagramClientId, 'clientSecret'=>$instagramClientSecret, 'baseUri'=>$configXml->instagram->baseUri);
-	$config['weather'] = array('baseUri'=>$configXml->weather->baseUri);
-	
+	// The config array is then returned so it can be accessed for use by the other functions
 	return $config;
-
 }
 
 else die("Can't access configuration file.");
