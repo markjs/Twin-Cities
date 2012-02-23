@@ -113,8 +113,8 @@ $country2 = $config['city2']['country'];
 			<!-- Twitter - Charlie Tizard -->
 			<h4>Tweets from Town</h4>
 			<?php
-			foreach(twitterGetTweets($config['city1']['lat'],$config['city1']['lng']) as $c2t) {
-				echo "<p class=\"tweet\"><a href='" . $c2t['authorUrl'] . "'>" . $c2t['authorName'] . ":</a> " . $c2t['content'] . "</p>";
+			foreach(twitterGetTweets($config['city1']['lat'],$config['city1']['lng']) as $c1t) {
+				echo "<p class=\"tweet\"><a href='" . $c1t['authorUrl'] . "'>" . $c1t['authorName'] . ":</a> " . $c1t['content'] . "</p>";
 			}
 			?>
 			<!-- End Twitter -->
