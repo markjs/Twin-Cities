@@ -73,8 +73,10 @@ $country2 = $config['city2']['country'];
 		</header>
 
 		<div class="eight columns" id="ed">
-			<h3>Edinburgh</h3>
-			<p>Edinburgh is the capital city of Scotland, the second largest city in Scotland, and the eighth most populous in the United Kingdom. The City of Edinburgh Council governs one of Scotland's 32 local government council areas. The council area includes urban Edinburgh and a 30 square miles (78 km2) rural area. Located in the south-east of Scotland, Edinburgh lies on the east coast of the Central Belt.</p>			
+			<section>
+				<h3>Edinburgh</h3>
+				<p>Edinburgh is the capital city of Scotland, the second largest city in Scotland, and the eighth most populous in the United Kingdom. The City of Edinburgh Council governs one of Scotland's 32 local government council areas. The council area includes urban Edinburgh and a 30 square miles (78 km2) rural area. Located in the south-east of Scotland, Edinburgh lies on the east coast of the Central Belt. <a href="http://en.wikipedia.org/wiki/Edinburgh">Read more&hellip;</a></p>			
+			</section>
 			
 			<section>
 			<!-- Weather - Mark Smith -->
@@ -143,8 +145,10 @@ $country2 = $config['city2']['country'];
 		</div>
 		
 		<div class="eight columns" id="sd">
-			<h3>San Diego</h3>
-			<p>San Diego is the eighth-largest city in the United States and second-largest city in California. The city is located on the coast of the Pacific Ocean in Southern California, immediately adjacent to the Mexican border. The birthplace of California, San Diego is known for its mild year-round climate and its natural deep-water harbor.</p>
+			<section>
+				<h3>San Diego</h3>
+				<p>San Diego is the eighth-largest city in the United States and second-largest city in California. The city is located on the coast of the Pacific Ocean in Southern California, immediately adjacent to the Mexican border. The birthplace of California, San Diego is known for its mild year-round climate and its natural deep-water harbor. <a href="http://en.wikipedia.org/wiki/San_diego">Read more&hellip;</a></p>
+			</section>
 			
 			<section>
 			<!-- Weather - Mark Smith -->		
