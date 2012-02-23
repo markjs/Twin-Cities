@@ -43,7 +43,7 @@
         </student>
     </group>
     <application>
-        <base_url>http://www.cems.uwe.ac.uk/~as2-jegtnes/dsa</base_url>
+        <base_url>http://www.cems.uwe.ac.uk/~as2-jegtnes/dsa_assign</base_url>
         <technologies>
             <tech>php</tech>
             <tech>other</tech>
@@ -52,37 +52,37 @@
             <tech>css</tech>
             <tech>javascript</tech>
         </technologies>
-        <config_source>http://www.cems.uwe.ac.uk/~as2-jegtnes/dsa/config.xml</config_source>
+        <config_source>http://www.cems.uwe.ac.uk/~as2-jegtnes/dsa_assign/config.xml</config_source>
         <source_files>
             <file>
                 <name>index.php</name>
                 <purpose>Main application file. Pulls all the data together from the individual sources and displays them.</purpose>
-                <source_url></source_url>
+            	<source_url>http://www.cems.uwe.ac.uk/~as2-jegtnes/dsa_assign/index.phps</source_url>
             </file>
             <file>
                 <name>commonlib.php</name>
                 <purpose>This library stores a couple of useful functions: One to load the configuration, one to check if you're currently on UWE's network, and one to get around the UWE proxies.</purpose>
-                <source_url></source_url>
+            	<source_url>http://www.cems.uwe.ac.uk/~as2-jegtnes/dsa_assign/commonlib.phps</source_url>
             </file>
             <file>
                 <name>header.php</name>
                 <purpose>Changes the colour of the header depending on the time of the day by echoing a different CSS file - a little easter egg.</purpose>
-                <source_url></source_url>
+            	<source_url>http://www.cems.uwe.ac.uk/~as2-jegtnes/dsa_assign/header.phps</source_url>
             </file>
             <file>
                 <name>maps.php</name>
                 <purpose>Contains the function to return and parse Google Maps.</purpose>
-                <source_url></source_url>
+            	<source_url>http://www.cems.uwe.ac.uk/~as2-jegtnes/dsa_assign/maps.phps</source_url>
             </file>
             <file>
                 <name>news.php</name>
                 <purpose>Contains the function to return the news from the Guardian.</purpose>
-                <source_url></source_url>
+            	<source_url>http://www.cems.uwe.ac.uk/~as2-jegtnes/dsa_assign/news.phps</source_url>
             </file>
             <file>
                 <name>weather.php</name>
                 <purpose>Contains the function to return the current and forecast weather from Google's Weather API.</purpose>
-                <source_url></source_url>
+            	<source_url>http://www.cems.uwe.ac.uk/~as2-jegtnes/dsa_assign/weather.phps</source_url>
             </file>
             <!--There are more source files, but these will be the individual components and the schema wouldn't allow all of them. They're described in the individual metafiles, however. -->
         </source_files>

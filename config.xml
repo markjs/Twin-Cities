@@ -6,27 +6,12 @@
 			<country>United Kingdom</country>
 			<lat>55.953237</lat>
 			<long>-3.188438</long>
-                        <poi>
-                            <place lat="55.948683" lng="-3.200197" html="Edinburgh Castle is a fortress which dominates the skyline of the city of Edinburgh, Scotland, from its position atop the volcanic Castle Rock." label="Edinburgh Castle"/>
-                            <place lat="55.955093" lng="-3.18861" html="The St. James Centre is a shopping centre and unoccupied Scottish Government office building in Edinburgh, Scotland." label="Royal Mile"/>
-                            <place lat="55.952391" lng="-3.188227" html="Waverley railway station is the main railway station in the Scottish capital Edinburgh. Covering an area of over 25 acres in the centre of the city." label="Waverley Railway Station"/>
-                            <place lat="55.949581" lng="-3.1914" html="Some stuff to display in theFirst Info Window" label="St Giles Cathedral"/>
-                            <place lat="55.950131" lng="-3.180531" html="Some stuff to display in theFirst Info Window" label="Museum of Edinburgh"/>
-                        </poi>
 		</city1>
 		<city2>
 			<name>San Diego</name>
 			<country>United States</country>
 			<lat>32.7153292</lat>
 			<long>-117.1572551</long>
-                        <poi>
-                            <place lat="32.732419" lng="-117.197342" html="Some stuff to display in theFirst Info Window" label="San Diego Airport"/>
-                            <place lat="32.736245" lng="-117.15168" html="Some stuff to display in theirst Info Window" label="San Diego Zoo"/>
-                            <place lat="32.754293" lng="-117.165928" html="Some stuff to display in theFirst Info Window" label="San Diega Hospital"/>
-                            <place lat="32.709528" lng="-117.169104" html="Some stuff to display in theFirst Info Window" label="
-Manchester Grand Hyatt"/>
-                            <place lat="32.720766" lng="-117.173535" html="Some stuff to display in theFirst Info Window" label="Museum of Edinburgh"/>
-                        </poi>
 		</city2>
 	</shared>
 	<news>
