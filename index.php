@@ -2,8 +2,7 @@
 include_once("commonlib.php");
 include_once("instagram.php");
 include_once("lastfm.php");
-//include_once("maps.php");
-include_once("maps2.php");
+include_once("maps.php");
 include_once("news.php");
 include_once("twitter.php");
 include_once("weather.php");

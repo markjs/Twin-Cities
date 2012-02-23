@@ -30,7 +30,7 @@
 
   <Placemark>
     <name>St Giles Cathedral</name>
-    <description>Some stuff to put in the first info window</description>
+    <description>St Giles' Cathedral, more properly termed the High Kirk of Edinburgh, is the principal place of worship of the Church of Scotland in Edinburgh. Its distinctive crown steeple is a prominent feature of the city skyline, at about a third of the way down the Royal Mile which runs from the Castle to Holyrood Palace.</description>
     <Point>
       <coordinates>-3.1914,55.949581</coordinates>
     </Point>
@@ -38,7 +38,7 @@
 
   <Placemark>
     <name>Museum of Edinburgh</name>
-    <description>Some stuff to put in the first info window</description>
+    <description>The Museum of Edinburgh is a museum in Edinburgh, Scotland, depicting the town's origins, history and legends. Situated in the late 16th-century Huntly House on the Royal Mile, it is maintained by Edinburgh City Council.</description>
     <Point>
       <coordinates>-3.180531,55.950131</coordinates>
     </Point>
@@ -54,7 +54,7 @@
 
   <Placemark>
     <name>San Diego Zoo</name>
-    <description>Some stuff to put in the first info window</description>
+    <description>The San Diego Zoo in Balboa Park, San Diego, California, is one of the most progressive zoos in the world, with over 4,000 animals of more than 800 species. It is also one of the few zoos in the world that houses the giant panda.</description>
     <Point>
       <coordinates>-117.15168,32.736245</coordinates>
     </Point>
@@ -69,8 +69,8 @@
   </Placemark>
 
   <Placemark>
-    <name>Manchester Grand Hyatt</name>
-    <description>Some stuff to put in the first info window</description>
+    <name>Manchester Grand Hyatt Hotel</name>
+    <description>Manchester Grand Hyatt Hotel is a high-rise building in San Diego composed of two towers. The towers are the third and seventh tallest buildings in the city.</description>
     <Point>
       <coordinates>-117.169104,32.709528</coordinates>
     </Point>

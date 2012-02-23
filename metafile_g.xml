@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<group_metafile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://www.cems.uwe.ac.uk/~p-chatterjee/2011/dsa/dsa_metafiles/group_metafile.xsd">
+    <module acronymn="DSA" id="UFCEKG-20-2">
+        <title>Data Schema's &amp; Applications</title>
+        <year>2011</year>
+        <hand_in>2012-02-23</hand_in>
+        <spec_url>http://www.cems.uwe.ac.uk/~p-chatterjee/2011/dsa/DSA_CW_Spec.html</spec_url>
+    </module>
+    <group id="W3ZOVUN0L5">
+        <workshop>
+            <day>Friday</day>
+            <time>11:00</time>
+            <tutor>MM</tutor>
+        </workshop>
+        <cities>
+            <city>Edinburgh</city>
+            <city>San_Diego</city>
+        </cities>
+        <student id="10029052">
+            <component type="News">
+                <description>This component takes care of displaying the news, using the excellent Guardian Open Platform API (http://www.guardian.co.uk/open-platform) to search for news articles that contain the city provided. This component only needs one parameter, the search term.</description>
+                <problems>The main problem I had with this component was the relevancy of the results returned. While the Guardian is definitely a global newspaper, there's no denying that its main focus is the UK; and the results from San Diego are either going to be not as relevant as the ones from Edinburgh.</problems>
+                <solutions>I sorted the results by relevance, but restricted the news to the latest seven days, as I wanted up-to-date content. There's not that many quality results for San Diego as a result, but at least they're relatively recent.</solutions>
+                <hours_effort>6</hours_effort>
+            </component>
+        </student>
+        <student id="10012517">
+            <component type="Weather">
+                <description>This component is comprised of two separate functions that use the Google weather API to gather and display current weather information and forecast information for the city specified.</description>
+                <problems>The data returned by the api for the current weather provided the temperature in both celsius and fahrenheit, but the forecast weather was only provided in fahrenheit, though we preferred celsius.</problems>
+                <solutions>I created a simple function to convert fahrenheit temperatures to celsius and implemented this into the forecast weather function.</solutions>
+                <hours_effort>3</hours_effort>
+            </component>
+        </student>
+        <student id="10029701">
+            <component type="Map">
+                <description>I used the GoogleMapsAPI and KML to display our twin cities and points of interest around the cities over 2 externally loaded maps.</description>
+                <problems>While exploring the GoogleMapsAPI and creating this component I spent a long time debugging due to a bug in the KML syntax. The GoogleMapsAPI uses the traditional method of displaying and reading coordinates, latitude then longitude. The KML syntax however have been created to read longitude, then latitude, then altitude.</problems>
+                <solutions>I wasted a lot of time reading though KML documentation and GoogleMapsAPI documentation trying to discover why my map overlay was not working, but when I tested the KML file directly in google maps I discovered my markers were being placed on Seychelles in the indian ocean. Once the bug was discovered it was easy to make adjustments to my KML to compensate.</solutions>
+                <hours_effort>7</hours_effort>
+            </component>
+        </student>
+    </group>
+    <application>
+        <base_url>http://www.cems.uwe.ac.uk/~as2-jegtnes/dsa</base_url>
+        <technologies>
+            <tech>php</tech>
+            <tech>other</tech>
+            <tech>xml</tech>
+            <tech>html5</tech>
+            <tech>css</tech>
+            <tech>javascript</tech>
+        </technologies>
+        <config_source>http://www.cems.uwe.ac.uk/~as2-jegtnes/dsa/config.xml</config_source>
+        <source_files>
+            <file>
+                <name>index.php</name>
+                <purpose>Main application file. Pulls all the data together from the individual sources and displays them.</purpose>
+                <source_url></source_url>
+            </file>
+            <file>
+                <name>commonlib.php</name>
+                <purpose>This library stores a couple of useful functions: One to load the configuration, one to check if you're currently on UWE's network, and one to get around the UWE proxies.</purpose>
+                <source_url></source_url>
+            </file>
+            <file>
+                <name>header.php</name>
+                <purpose>Changes the colour of the header depending on the time of the day by echoing a different CSS file - a little easter egg.</purpose>
+                <source_url></source_url>
+            </file>
+            <file>
+                <name>maps.php</name>
+                <purpose>Contains the function to return and parse Google Maps.</purpose>
+                <source_url></source_url>
+            </file>
+            <file>
+                <name>news.php</name>
+                <purpose>Contains the function to return the news from the Guardian.</purpose>
+                <source_url></source_url>
+            </file>
+            <file>
+                <name>weather.php</name>
+                <purpose>Contains the function to return the current and forecast weather from Google's Weather API.</purpose>
+                <source_url></source_url>
+            </file>
+            <!--There are more source files, but these will be the individual components and the schema wouldn't allow all of them. They're described in the individual metafiles, however. -->
+        </source_files>
+    </application>
+    <overall_comments>
+        From the start, our group has had a fair mixture of different skills, though we've all had *some* experience using PHP, at the very least. One group member is more interested in the design side of things than anything else, and therefore created the visual layout and marked it up in addition to creating his individual components.
+        We started working on the project relatively early and gradually instead of trying to rush everything at the end, which has definitely paid off. We've maintained good communication throughout, and have as a result been able to iron out any major difficulties/disagreements relatively easily.
+        Git was used to manage collaboration and versioning, and this is the first time either of us really had used Git for a university project. Some initial learning difficulties aside, using Git to manage the project has been a huge success, especially compared to similar group projects we've done, which were overall much more difficult. Git definitely helped the collaboration process a lot and is something we will definitely use again in the future.
+    </overall_comments>
+</group_metafile>
