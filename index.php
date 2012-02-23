@@ -71,76 +71,6 @@ $country2 = $config['city2']['country'];
 			<h5 id="subtitle">San Diego &amp; Edinburgh</h5>
 			<div id="skyline"></div>
 		</header>
-		
-		<div class="eight columns" id="sd">
-			<h3>San Diego</h3>
-			<p>San Diego (which of course in German means a whale's vagina) is the eighth-largest city in the United States and second-largest city in California. The city is located on the coast of the Pacific Ocean in Southern California, immediately adjacent to the Mexican border. The birthplace of California, San Diego is known for its mild year-round climate and its natural deep-water harbor.</p>
-			
-			<section>
-			<!-- Weather - Mark Smith -->		
-			<h4>Current Weather</h4>
-			<?php echo weatherGetCurrentWeather($city2); ?>
-			<h4>Weather Forecast</h4>
-			<ul>
-				<?php for ($i=0; $i < 4; $i++) { 
-					echo "<li>" . weatherGetFutureWeather($city2,$i) . "</li>";
-				} ?>
-			</ul>
-			<!-- End Weather -->	
-			</section>
-			
-			<section>
-			<!-- News - Alex Jegtnes -->
-			<h4>Latest News</h4>
-			<ul>
-			<?php
-				foreach(acquireNews($city2) as $news) {
-					echo "<li><a href=\"" . $news['url'] . "\">" . $news['title'] . "</a></li>";
-				}
-			?>
-			<!-- End News -->
-			</ul>
-			</section>
-			
-			<section>
-			<!-- Google Maps - Charlie Tizard -->
-			<h4>Street Map</h4>
-			<?php echo renderMap($config['city2']['lat'],$config['city2']['lng']); ?>
-			<!-- End Google Maps -->
-			</section>
-			
-			<section>
-			<!-- Twitter - Charlie Tizard -->
-			<h4>Tweets from Town</h4>
-			<?php
-			foreach(twitterGetTweets($config['city2']['lat'],$config['city2']['lng']) as $c2t) {
-				echo "<p class=\"tweet\"><a href='" . $c2t['authorUrl'] . "'>" . $c2t['authorName'] . ":</a> " . $c2t['content'] . "</p>";
-			}
-			?>
-			<!-- End Twitter -->
-			<div class=\"clear\"></div>
-			</section>
-			
-			<section>
-			<!-- Instagram - Mark Smith -->
-			<h4>Local Instagram Posts</h4>
-			
-			<?php echo instagramGetLatestPhotos($config['city2']['lat'],$config['city2']['lng']); ?>
-			
-			<!-- End Instagram -->
-			</section>
-			
-			<section>
-			<!-- Last.fm - Alex Jegtnes -->
-			<h4>Top Last.fm Artists</h4>
-			<ul class="lastfm"><?php 
-			foreach(lastfmGetTopArtists(10, $city2, $country2) as $lfm) {
-				echo("<li><a href=\"" . $lfm['url'] . "\">" . "<img alt=\"A picture of " . $lfm['name'] . "\" src=\"" . $lfm['image'] . "\" />" . $lfm['name'] . "</a></li>");
-			}
-			?></ul>
-			<!-- End Last.fm -->
-			</section>
-		</div>
 
 		<div class="eight columns" id="ed">
 			<h3>Edinburgh</h3>
@@ -210,6 +140,76 @@ $country2 = $config['city2']['country'];
 			<!-- End Last.fm -->
 			</section>
 			
+		</div>
+		
+		<div class="eight columns" id="sd">
+			<h3>San Diego</h3>
+			<p>San Diego (which of course in German means a whale's vagina) is the eighth-largest city in the United States and second-largest city in California. The city is located on the coast of the Pacific Ocean in Southern California, immediately adjacent to the Mexican border. The birthplace of California, San Diego is known for its mild year-round climate and its natural deep-water harbor.</p>
+			
+			<section>
+			<!-- Weather - Mark Smith -->		
+			<h4>Current Weather</h4>
+			<?php echo weatherGetCurrentWeather($city2); ?>
+			<h4>Weather Forecast</h4>
+			<ul>
+				<?php for ($i=0; $i < 4; $i++) { 
+					echo "<li>" . weatherGetFutureWeather($city2,$i) . "</li>";
+				} ?>
+			</ul>
+			<!-- End Weather -->	
+			</section>
+			
+			<section>
+			<!-- News - Alex Jegtnes -->
+			<h4>Latest News</h4>
+			<ul>
+			<?php
+				foreach(acquireNews($city2) as $news) {
+					echo "<li><a href=\"" . $news['url'] . "\">" . $news['title'] . "</a></li>";
+				}
+			?>
+			<!-- End News -->
+			</ul>
+			</section>
+			
+			<section>
+			<!-- Google Maps - Charlie Tizard -->
+			<h4>Street Map</h4>
+			<?php echo renderMap($config['city2']['lat'],$config['city2']['lng']); ?>
+			<!-- End Google Maps -->
+			</section>
+			
+			<section>
+			<!-- Twitter - Charlie Tizard -->
+			<h4>Tweets from Town</h4>
+			<?php
+			foreach(twitterGetTweets($config['city2']['lat'],$config['city2']['lng']) as $c2t) {
+				echo "<p class=\"tweet\"><a href='" . $c2t['authorUrl'] . "'>" . $c2t['authorName'] . ":</a> " . $c2t['content'] . "</p>";
+			}
+			?>
+			<!-- End Twitter -->
+			<div class=\"clear\"></div>
+			</section>
+			
+			<section>
+			<!-- Instagram - Mark Smith -->
+			<h4>Local Instagram Posts</h4>
+			
+			<?php echo instagramGetLatestPhotos($config['city2']['lat'],$config['city2']['lng']); ?>
+			
+			<!-- End Instagram -->
+			</section>
+			
+			<section>
+			<!-- Last.fm - Alex Jegtnes -->
+			<h4>Top Last.fm Artists</h4>
+			<ul class="lastfm"><?php 
+			foreach(lastfmGetTopArtists(10, $city2, $country2) as $lfm) {
+				echo("<li><a href=\"" . $lfm['url'] . "\">" . "<img alt=\"A picture of " . $lfm['name'] . "\" src=\"" . $lfm['image'] . "\" />" . $lfm['name'] . "</a></li>");
+			}
+			?></ul>
+			<!-- End Last.fm -->
+			</section>
 		</div>
 		
 		<footer class="sixteen columns nomargin">
