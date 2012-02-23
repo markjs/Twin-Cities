@@ -54,7 +54,7 @@ function loadConfig() {
 		'numberOfResults'=>$configXml->news->resultNum,
 		'dates'=>$configXml->news->dates);
 	$config['lastfm'] = array(
-		'method'=>$onfigXml->lastfm->method,
+		'method'=>$configXml->lastfm->method,
 		'apiKey'=>$configXml->lastfm->apiKey,
 		'numberOfResults'=>$configXml->lastfm->results);
 	$config['instagram'] = array(

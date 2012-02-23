@@ -22,7 +22,7 @@ function instagramGetLatestPhotos($lat,$lng) {
 	foreach ($response->data as $entry) {
 		if ($i < 4) {
 			// Ensures image still has alt-text even if no instagram caption is provided
-			if ($entry->caption->text == "") {
+			if (isset($entry->caption->text)) {
 				$alt = "Instagram Image";
 			} else {
 				$alt = $entry->caption->text;
