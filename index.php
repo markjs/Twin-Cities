@@ -144,7 +144,7 @@ $country2 = $config['city2']['country'];
 		
 		<div class="eight columns" id="sd">
 			<h3>San Diego</h3>
-			<p>San Diego (which of course in German means a whale's vagina) is the eighth-largest city in the United States and second-largest city in California. The city is located on the coast of the Pacific Ocean in Southern California, immediately adjacent to the Mexican border. The birthplace of California, San Diego is known for its mild year-round climate and its natural deep-water harbor.</p>
+			<p>San Diego is the eighth-largest city in the United States and second-largest city in California. The city is located on the coast of the Pacific Ocean in Southern California, immediately adjacent to the Mexican border. The birthplace of California, San Diego is known for its mild year-round climate and its natural deep-water harbor.</p>
 			
 			<section>
 			<!-- Weather - Mark Smith -->		
