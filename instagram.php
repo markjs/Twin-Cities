@@ -21,8 +21,14 @@ function instagramGetLatestPhotos($lat,$lng) {
 	// Foreach used so that if less than 4 items are returned the loop will stop
 	foreach ($response->data as $entry) {
 		if ($i < 4) {
+			// Ensures image still has alt-text even if no instagram caption is provided
+			if ($entry->caption->text == "") {
+				$alt = "Instagram Image";
+			} else {
+				$alt = $entry->caption->text;
+			}
 			// Image data appended to $html, ready to be printed
-			$html .= "<a href=\"" . $entry->link . "\"><img src=\"" . $entry->images->thumbnail->url . "\" alt=\"" . $entry->caption->text . "\"/></a>";
+			$html .= "<a href=\"" . $entry->link . "\"><img src=\"" . $entry->images->thumbnail->url . "\" alt=\"" . $alt . "\"/></a>";
 		}
 		$i++;
 	}
